@@ -170,11 +170,11 @@ export function SectionSkills() {
                             <Col span={"auto"}>
                               <h4 className="text_regular font-semibold">{name}</h4>{
                                 level === 'Basic' ? (
-                                  <h5 className="text-xs text-blue-600 dark:text-blue-700">{level}</h5>
+                                  <h5 className="text-sm font-medium text-blue-600 dark:text-blue-700">{level}</h5>
                                 ) : level === 'Intermediate' ? (
-                                  <h5 className="text-xs text-green-600 dark:text-green-700">{level}</h5>
+                                  <h5 className="text-sm font-medium text-green-600 dark:text-green-700">{level}</h5>
                                 ) :
-                                  <h5 className="text-xs text-purple-600 dark:text-purple-700">{level}</h5>
+                                  <h5 className="text-sm font-medium text-purple-600 dark:text-purple-700">{level}</h5>
                               }</Col>
                           </Row>
                         </Col>

@@ -6,5 +6,6 @@ export class Meta {
     title: _.upperFirst(_.trim(`Sekhudin's Portfolio`)),
     description: "This is Sekhudin's portfolio that shows general information and skills mastered",
     themeColor: "#FFFFFF",
+    
   };
 }

@@ -77,7 +77,8 @@ export function PartNavMenu() {
           <button className={`
             ${collapse ? '' : 'rotate-180'} flex_centerxy
             h-7 w-7 rounded-full duration-500 hover_blur`}
-            aria-label='theme-button'
+            name='menu-collaps'
+            aria-label='menu-collaps'
             onClick={() => setCollapse(!collapse)}>
             <AiOutlineDoubleRight />
           </button>

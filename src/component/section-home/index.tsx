@@ -57,6 +57,9 @@ export function SectionHome() {
                 id='profile_img'
                 src={profile.src}
                 alt={profile.alt}
+                priority={true}
+                placeholder="blur"
+                quality={100}
               />
             </div>
           </Col>

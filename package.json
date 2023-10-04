@@ -7,7 +7,8 @@
     "dev:turbo": "next dev --turbo --show-all",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lg": "lighthouse http://localhost:3000/ --view --output-path=.lighthouse/lg-result.html"
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.17.0",

@@ -91,6 +91,8 @@ export function ThemeToggle(props: Omit<TagProps, 'onChange'>) {
   return (
     <button className={`hover_blur hover:rotate-180 duration-500
       h-7 w-7 p-1 rounded-full`}
+      name="theme-toggle"
+      aria-label="theme-toggle"
       onClick={clickHandler}>
       {isDark ? <MdDarkMode /> : <MdOutlineLightMode />}
     </button>
