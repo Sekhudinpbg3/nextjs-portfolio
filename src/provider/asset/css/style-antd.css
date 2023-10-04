@@ -1,0 +1,13 @@
+span.ant-menu-title-content {
+  margin-inline-start: 20px !important;
+  width: calc(100vw / 3);
+  /* md */
+  @media screen and (min-width: 768px) {
+    margin-inline-start: 0px !important;
+  }
+}
+
+div.ant-menu-item-icon {
+  width: fit-content;
+  margin-left: -2px !important;
+}

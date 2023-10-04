@@ -1,0 +1,64 @@
+@import url("./animation.css");
+@import url("./style.css");
+@import url("./style-antd.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* screen */
+  --sm: 640px;
+  --md: 768px;
+  --lg: 1024px;
+  --xl: 1280px;
+  --2xl: 1536px;
+}
+
+@layer components {
+  .flex_centerx {
+    @apply flex justify-center !important;
+  }
+  .flex_centery {
+    @apply flex items-center !important;
+  }
+  .flex_centerxy {
+    @apply flex justify-center items-center !important;
+  }
+  .grid_centerx {
+    @apply grid justify-items-center !important;
+  }
+  .grid_centery {
+    @apply grid content-center !important;
+  }
+  .grid_centerxy {
+    @apply grid justify-items-center content-center !important;
+  }
+  .hover_blur {
+    @apply hover:bg-transparent/10 dark:hover:bg-white/10 hover:backdrop-blur-sm duration-500 !important;
+  }
+  .drawer_navigation {
+    @apply bg-white/40 dark:bg-transparent/40 backdrop-blur-sm 
+    backdrop-brightness-150 dark:backdrop-brightness-50 drop-shadow-lg !important;
+  }
+  .header_scroll {
+    @apply bg-white/40 dark:bg-transparent/40 backdrop-blur-sm
+    backdrop-brightness-150 dark:backdrop-brightness-50 !important;
+  }
+  .menu_item_title {
+    @apply text-sm lg:text-base !important;
+  }
+  .section_container {
+    @apply relative px-4 w-full lg:w-11/12 xl:w-10/12 2xl:w-9/12 !important;
+  }
+  .text_regular {
+    @apply text-gray-600 dark:text-gray-300 !important;
+  }
+  .text_title {
+    @apply text-white dark:text-gray-300 !important;
+  }
+  .card_regular {
+    @apply rounded-md lg:rounded-xl bg-white dark:bg-slate-900 
+    drop-shadow-xl !important;
+  }
+}

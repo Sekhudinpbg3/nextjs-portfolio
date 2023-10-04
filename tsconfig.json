@@ -13,15 +13,19 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "downlevelIteration": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "src/*": ["./src/*"]
+      "public/*": ["./public/*"],
+      "src/*": ["./src/*"],
+      "@component/*": ["./src/component/*"],
+      "@provider/*": ["./src/provider/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next.config.js", "src/component/header/const.tsx"],
   "exclude": ["node_modules"]
 }

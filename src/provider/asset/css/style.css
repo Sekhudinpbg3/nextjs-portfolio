@@ -1,0 +1,120 @@
+.section {
+  min-height: 100vh !important;
+  position: relative;
+}
+
+#profile_img {
+  background-color: hsla(237, 85%, 71%, 0.71);
+  background-image: radial-gradient(at 47% 51%, hsla(180, 79%, 26%, 0.73) 0px, transparent 50%),
+    radial-gradient(at 24% 80%, hsla(189, 100%, 50%, 0.31) 0px, transparent 50%),
+    radial-gradient(at 85% 33%, hsla(225, 100%, 28%, 1) 0px, transparent 50%),
+    radial-gradient(at 24% 19%, hsla(65, 100%, 48%, 0.24) 0px, transparent 50%);
+  animation: profile_animate 5s ease-in-out 1s infinite;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+}
+
+#App.dark #profile_img {
+  background-color: hsla(222, 54%, 20%, 0.71);
+  background-image: radial-gradient(at 47% 51%, hsla(180, 18%, 14%, 0.73) 0px, transparent 50%),
+    radial-gradient(at 24% 80%, hsla(188, 100%, 15%, 0.31) 0px, transparent 50%),
+    radial-gradient(at 85% 33%, hsla(225, 92%, 18%, 1) 0px, transparent 50%),
+    radial-gradient(at 24% 19%, hsla(60, 100%, 42%, 0.24) 0px, transparent 50%);
+}
+
+#about_profile {
+  background-color: hsla(195, 50%, 93%, 1);
+  background-image: radial-gradient(at 98% 2%, hsla(195, 54%, 49%, 0.33) 0px, transparent 50%),
+    radial-gradient(at 1% 2%, hsla(59, 87%, 43%, 0.47) 0px, transparent 50%);
+}
+
+#App.dark #about_profile {
+  background-color: hsla(195, 50%, 93%, 1);
+  background-image: radial-gradient(at 98% 2%, hsla(195, 54%, 49%, 0.33) 0px, transparent 50%),
+    radial-gradient(at 1% 2%, hsla(59, 87%, 43%, 0.47) 0px, transparent 50%);
+}
+
+#home {
+  background-color: hsla(240, 0%, 0%, 1);
+  background-image: radial-gradient(at 49% 50%, hsla(359, 81%, 35%, 0.27) 0px, transparent 50%),
+    radial-gradient(at 87% 6%, hsla(200, 81%, 50%, 0.53) 0px, transparent 50%),
+    radial-gradient(at 10% 3%, hsla(240, 82%, 12%, 1) 0px, transparent 50%),
+    radial-gradient(at 9% 97%, hsla(59, 87%, 43%, 0.33) 0px, transparent 50%);
+}
+
+#App.dark #home {
+  background-color: hsla(195, 50%, 93%, 1);
+  background-image: radial-gradient(at 49% 50%, hsla(359, 81%, 35%, 0.29) 0px, transparent 50%),
+    radial-gradient(at 87% 6%, hsla(200, 81%, 50%, 1) 0px, transparent 50%),
+    radial-gradient(at 3% 2%, hsla(240, 82%, 12%, 0.76) 0px, transparent 50%),
+    radial-gradient(at 9% 97%, hsla(59, 87%, 43%, 0.47) 0px, transparent 50%);
+}
+
+#overlay_home {
+  background-color: hsla(195, 50%, 93%, 1);
+  background-image: radial-gradient(at 49% 50%, hsla(359, 81%, 35%, 0.29) 0px, transparent 50%),
+    radial-gradient(at 87% 6%, hsla(200, 81%, 50%, 1) 0px, transparent 50%),
+    radial-gradient(at 3% 2%, hsla(240, 82%, 12%, 0.76) 0px, transparent 50%),
+    radial-gradient(at 9% 97%, hsla(59, 87%, 43%, 0.47) 0px, transparent 50%);
+}
+
+#App.dark #overlay_home {
+  background-color: hsla(240, 0%, 0%, 1);
+  background-image: radial-gradient(at 49% 50%, hsla(359, 81%, 35%, 0.27) 0px, transparent 50%),
+    radial-gradient(at 87% 6%, hsla(200, 81%, 50%, 0.53) 0px, transparent 50%),
+    radial-gradient(at 10% 3%, hsla(240, 82%, 12%, 1) 0px, transparent 50%),
+    radial-gradient(at 9% 97%, hsla(59, 87%, 43%, 0.33) 0px, transparent 50%);
+}
+
+#about {
+  background-color: hsla(195, 0%, 0%, 1);
+  background-image: radial-gradient(at 9% 3%, hsla(59, 87%, 43%, 0.33) 0px, transparent 50%),
+    radial-gradient(at 64% 51%, hsla(195, 54%, 49%, 0.32) 0px, transparent 50%);
+}
+
+#App.dark #about {
+  background-color: hsla(195, 50%, 93%, 1);
+  background-image: radial-gradient(at 9% 3%, hsla(59, 87%, 43%, 0.47) 0px, transparent 50%),
+    radial-gradient(at 64% 51%, hsla(195, 54%, 49%, 0.43) 0px, transparent 50%);
+}
+
+#overlay_about {
+  background-color: hsla(195, 50%, 93%, 1);
+  background-image: radial-gradient(at 9% 3%, hsla(59, 87%, 43%, 0.47) 0px, transparent 50%),
+    radial-gradient(at 64% 51%, hsla(195, 54%, 49%, 0.43) 0px, transparent 50%);
+}
+
+#App.dark #overlay_about {
+  background-color: hsla(195, 0%, 0%, 1);
+  background-image: radial-gradient(at 9% 3%, hsla(59, 87%, 43%, 0.33) 0px, transparent 50%),
+    radial-gradient(at 64% 51%, hsla(195, 54%, 49%, 0.32) 0px, transparent 50%);
+}
+
+#skills {
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(at 100% 75%, hsla(195, 71%, 48%, 0.29) 0px, transparent 50%),
+    radial-gradient(at 26% 35%, hsla(359, 83%, 40%, 0.29) 0px, transparent 50%),
+    radial-gradient(at 59% 49%, hsla(59, 87%, 43%, 0.18) 0px, transparent 50%);
+}
+
+#App.dark #skills {
+  background-color: hsla(195, 50%, 93%, 1);
+  background-image: radial-gradient(at 100% 75%, hsla(195, 71%, 48%, 0.4) 0px, transparent 50%),
+    radial-gradient(at 25% 53%, hsla(359, 83%, 40%, 0.37) 0px, transparent 50%);
+}
+
+#overlay_skills {
+  background-color: hsla(195, 50%, 93%, 1);
+  background-image: radial-gradient(at 100% 75%, hsla(195, 71%, 48%, 0.4) 0px, transparent 50%),
+    radial-gradient(at 25% 53%, hsla(359, 83%, 40%, 0.37) 0px, transparent 50%);
+}
+
+#App.dark #overlay_skills {
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(at 100% 75%, hsla(195, 71%, 48%, 0.29) 0px, transparent 50%),
+    radial-gradient(at 26% 35%, hsla(359, 83%, 40%, 0.29) 0px, transparent 50%),
+    radial-gradient(at 59% 49%, hsla(59, 87%, 43%, 0.18) 0px, transparent 50%);
+}
+
+#portfolio {
+  background-color: aquamarine;
+}
