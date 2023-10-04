@@ -12,7 +12,7 @@ import {
 
 export default function Home() {
   return (
-    <Layout className="relative">
+    <Layout className="relative w-full overflow-hidden">
       <Header />
       <Layout.Content>
         <SectionHome />
