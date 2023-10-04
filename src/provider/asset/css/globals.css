@@ -48,6 +48,9 @@
   .menu_item_title {
     @apply text-sm lg:text-base !important;
   }
+  .section {
+    @apply min-h-screen relative !important;
+  }
   .section_container {
     @apply relative px-4 w-full lg:w-11/12 xl:w-10/12 2xl:w-9/12 !important;
   }

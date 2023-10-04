@@ -38,7 +38,7 @@ export function SectionHome() {
   useWindowEvent("scroll", tweenHandler)
 
   return (
-    <section id="home" className="section flex justify-center">
+    <section id="home" className="section flex_centerxy">
       <div id="overlay_home" className={`absolute w-full h-full`} />
       <div className={`section_container flex_centerxy`}>
         <Row className={`flex_centerxy h-full lg:h-2/3`}>

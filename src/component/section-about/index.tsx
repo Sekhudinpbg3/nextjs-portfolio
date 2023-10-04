@@ -109,7 +109,7 @@ export function SectionAbout() {
     <section id="about" className="section flex justify-center">
       <div id="overlay_about" className={`absolute w-full h-full`} />
 
-      <div className={`section_container relative`}>
+      <div className={`section_container`}>
         <Row ref={parent_} className={`h-fit lg:h-full py-20`} justify={"end"}>
           <Col className="flex justify-start items-center"
             lg={{ span: 12 }}
