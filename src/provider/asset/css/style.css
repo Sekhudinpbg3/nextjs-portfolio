@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #profile_img {
   background-color: hsla(237, 85%, 71%, 0.71);
   background-image: radial-gradient(at 47% 51%, hsla(180, 79%, 26%, 0.73) 0px, transparent 50%),
