@@ -102,7 +102,6 @@ export function SectionAbout() {
     }
   }
 
-  useWindowLoad(tweenHandler)
   useWindowEvent("scroll", tweenHandler)
 
   return (

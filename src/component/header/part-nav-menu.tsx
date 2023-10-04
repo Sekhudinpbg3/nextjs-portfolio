@@ -28,7 +28,7 @@ export function PartNavMenu() {
   const burgerHandler = () => {
     setOpen(true);
   }
-  
+
   const closeDrawer = () => {
     setOpen(false);
   }
@@ -39,10 +39,9 @@ export function PartNavMenu() {
 
   return (
     <>
-      <button className={`
-        block md:hidden hover_blur
-        h-7 w-7 p-1 rounded-full
-        `}
+      <button className={`block md:hidden hover_blur
+        h-7 w-7 p-1 rounded-full`}
+        aria-label='toggle-button'
         onClick={burgerHandler}>
         <Icon
           fillClass='fill-gray-800 dark:fill-gray-100'
@@ -76,9 +75,9 @@ export function PartNavMenu() {
         onClose={closeDrawer}
         footer={(
           <button className={`
-            ${collapse ? '' : 'rotate-180'}
-            h-7 w-7 flex_centerxy rounded-full duration-500 hover_blur
-            `}
+            ${collapse ? '' : 'rotate-180'} flex_centerxy
+            h-7 w-7 rounded-full duration-500 hover_blur`}
+            aria-label='theme-button'
             onClick={() => setCollapse(!collapse)}>
             <AiOutlineDoubleRight />
           </button>

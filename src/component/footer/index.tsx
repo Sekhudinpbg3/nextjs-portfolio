@@ -1,4 +1,4 @@
-import { Layout } from "antd";
+import Layout from "antd/lib/layout";
 
 export function Footer() {
   return (

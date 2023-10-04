@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, ReactNode } from "react";
+import { useMemo } from "react";
 import { StyleProvider, createCache, extractStyle } from '@ant-design/cssinjs';
 import { useServerInsertedHTML } from 'next/navigation';
 import type Entity from '@ant-design/cssinjs/es/Cache';

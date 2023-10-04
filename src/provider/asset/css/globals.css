@@ -55,7 +55,7 @@
     @apply relative px-4 w-full lg:w-11/12 xl:w-10/12 2xl:w-9/12 !important;
   }
   .text_regular {
-    @apply text-gray-600 dark:text-gray-300 !important;
+    @apply text-gray-700 dark:text-gray-300 !important;
   }
   .text_title {
     @apply text-white dark:text-gray-300 !important;

@@ -34,7 +34,6 @@ export function SectionHome() {
     }
   }
 
-  useWindowLoad(tweenHandler)
   useWindowEvent("scroll", tweenHandler)
 
   return (

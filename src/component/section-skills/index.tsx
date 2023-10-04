@@ -112,9 +112,7 @@ export function SectionSkills() {
     }
   }
 
-  useWindowLoad(tweenHandler);
   useWindowEvent("scroll", tweenHandler);
-  useWindowLoad(cardTweenHandler);
   useWindowEvent("scroll", cardTweenHandler);
 
 

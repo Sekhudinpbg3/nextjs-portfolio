@@ -80,15 +80,15 @@ export function PartText() {
 
   const tweenHandler = () => {
     for (const tween of tweens) {
-      if (isSection("home")) {
-        tween.play().delay(0.5)
-      } else {
+      if (isSection("home", 0.9)) {
+        tween.play().delay(0.5);
+      }
+      else {
         tween.reverse().delay(0.5)
       }
     }
   }
 
-  useWindowLoad(tweenHandler)
   useWindowEvent("scroll", tweenHandler)
 
   return (
@@ -104,7 +104,7 @@ export function PartText() {
       </h2>
       <h3 ref={as_} className={`${inter.className} ${css['as']} w-full font-bold text-blue-600
         mt-0.5 md:mt-2  lg:mt-3 text-lg md:text-xl lg:text-2xl 2xl:text-3xl`}>
-        Software Enginer
+        Software Engineer
       </h3>
 
       <p ref={desc_} className={`text_regular font-medium
