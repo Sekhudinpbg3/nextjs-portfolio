@@ -26,9 +26,9 @@ export function PartNavMenu() {
   }
 
   const burgerHandler = () => {
-    setCollapse(true);
     setOpen(true);
   }
+  
   const closeDrawer = () => {
     setOpen(false);
   }
