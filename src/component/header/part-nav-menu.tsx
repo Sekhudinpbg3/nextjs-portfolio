@@ -25,6 +25,14 @@ export function PartNavMenu() {
     }
   }
 
+  const burgerHandler = () => {
+    setCollapse(true);
+    setOpen(true);
+  }
+  const closeDrawer = () => {
+    setOpen(false);
+  }
+
   useWindowMedia('md', () => setOpen(false));
   useWindowLoad(menuEventHandler);
   useWindowEvent("scroll", menuEventHandler);
@@ -35,7 +43,7 @@ export function PartNavMenu() {
         block md:hidden hover_blur
         h-7 w-7 p-1 rounded-full
         `}
-        onClick={() => setOpen(!open)}>
+        onClick={burgerHandler}>
         <Icon
           fillClass='fill-gray-800 dark:fill-gray-100'
           src={AiOutlineMenu} />
@@ -65,7 +73,7 @@ export function PartNavMenu() {
           justifyContent: "flex-end",
           padding: "3px 6px"
         }}
-        onClose={() => setOpen(false)}
+        onClose={closeDrawer}
         footer={(
           <button className={`
             ${collapse ? '' : 'rotate-180'}
@@ -83,7 +91,7 @@ export function PartNavMenu() {
           onSelect={menuOnSelect}
           inlineCollapsed={collapse}
           disabledOverflow={true}
-          onClick={() => setOpen(false)} />
+          onClick={closeDrawer} />
       </Drawer>
 
       <Menu className={`border-none hidden md:block bg-transparent`}

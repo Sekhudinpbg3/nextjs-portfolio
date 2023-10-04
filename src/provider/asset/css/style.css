@@ -87,7 +87,7 @@
 #skills {
   background-color: hsla(0, 0%, 0%, 1);
   background-image: radial-gradient(at 100% 75%, hsla(195, 71%, 48%, 0.29) 0px, transparent 50%),
-    radial-gradient(at 26% 35%, hsla(359, 83%, 40%, 0.29) 0px, transparent 50%),
+    radial-gradient(at 26% 45%, hsla(359, 83%, 40%, 0.25) 0px, transparent 50%),
     radial-gradient(at 59% 49%, hsla(59, 87%, 43%, 0.18) 0px, transparent 50%);
 }
 
@@ -106,7 +106,7 @@
 #App.dark #overlay_skills {
   background-color: hsla(0, 0%, 0%, 1);
   background-image: radial-gradient(at 100% 75%, hsla(195, 71%, 48%, 0.29) 0px, transparent 50%),
-    radial-gradient(at 26% 35%, hsla(359, 83%, 40%, 0.29) 0px, transparent 50%),
+    radial-gradient(at 26% 45%, hsla(359, 83%, 40%, 0.25) 0px, transparent 50%),
     radial-gradient(at 59% 49%, hsla(59, 87%, 43%, 0.18) 0px, transparent 50%);
 }
 

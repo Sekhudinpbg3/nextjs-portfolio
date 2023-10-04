@@ -95,9 +95,9 @@ export function SectionSkills() {
   const tweenHandler = () => {
     for (const tw of tweens) {
       if (isSection("skills")) {
-        tw.play()
+        tw.play().delay(0.5)
       } else {
-        tw.reverse()
+        tw.reverse().delay(0.5)
       }
     }
   }
@@ -105,9 +105,9 @@ export function SectionSkills() {
   const cardTweenHandler = () => {
     for (const tw of cardTweens) {
       if (isSection("skills")) {
-        tw.play()
+        tw.play().delay(0.5)
       } else {
-        tw.reverse()
+        tw.reverse().delay(0.5)
       }
     }
   }

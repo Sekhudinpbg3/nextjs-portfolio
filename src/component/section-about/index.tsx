@@ -95,9 +95,9 @@ export function SectionAbout() {
   const tweenHandler = () => {
     for (const tween of tweens) {
       if (isSection("about")) {
-        tween.play()
+        tween.play().delay(0.5)
       } else {
-        tween.reverse()
+        tween.reverse().delay(0.5)
       }
     }
   }

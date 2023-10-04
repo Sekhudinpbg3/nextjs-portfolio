@@ -81,9 +81,9 @@ export function PartText() {
   const tweenHandler = () => {
     for (const tween of tweens) {
       if (isSection("home")) {
-        tween.play()
+        tween.play().delay(0.5)
       } else {
-        tween.reverse()
+        tween.reverse().delay(0.5)
       }
     }
   }
