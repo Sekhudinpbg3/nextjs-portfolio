@@ -1,10 +1,10 @@
 import { Row } from "antd";
 import { Col } from "antd/lib";
 
-export function SectionPortfolio() {
+export function SectionProject() {
   return (
-    <section id="portfolio" className="section flex justify-center">
-      <div id="overlay_portfolio" className={`absolute w-full h-full`} />
+    <section id="project" className="section flex justify-center">
+      <div id="overlay_project" className={`absolute w-full h-full`} />
       <div className={`section_container flex_centerxy`}>
         <Row className={`h-full w-full lg:h-2/3 py-16 lg:py-0`}>
           <Col className={`flex justify-center lg:justify-start

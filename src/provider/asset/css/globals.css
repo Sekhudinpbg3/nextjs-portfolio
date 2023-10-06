@@ -42,7 +42,11 @@
     backdrop-brightness-150 dark:backdrop-brightness-50 drop-shadow-lg !important;
   }
   .header_scroll {
-    @apply bg-white/40 dark:bg-transparent/40 backdrop-blur-sm
+    @apply bg-white/40 dark:bg-slate-900/40 backdrop-blur-sm
+    backdrop-brightness-150 dark:backdrop-brightness-50 !important;
+  }
+  .footer_class {
+    @apply bg-white dark:bg-slate-900 backdrop-blur-md py-20
     backdrop-brightness-150 dark:backdrop-brightness-50 !important;
   }
   .menu_item_title {
@@ -63,5 +67,9 @@
   .card_regular {
     @apply rounded-md lg:rounded-xl bg-white dark:bg-slate-900 
     drop-shadow-xl !important;
+  }
+  .button_primary {
+    @apply text-blue-600 hover:text-blue-700 ring-blue-500 
+    bg-blue-600 bg-opacity-10 hover:bg-opacity-30 duration-500 !important;
   }
 }

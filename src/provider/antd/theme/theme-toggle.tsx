@@ -12,7 +12,13 @@ export function ThemeToggle(props: Omit<TagProps, 'onChange'>) {
     toggleTheme()
     const themeTweens = gsapFromTo({ currentTarget: "#App" }, [
       {
-        selector: "#overlay_home, #overlay_about, #overlay_skills",
+        selector: `
+          #overlay_home,
+          #overlay_about,
+          #overlay_skills,
+          #overlay_portfolio,
+          #overlay_contact
+          `,
         from: {
           opacity: 0,
           width: 5,

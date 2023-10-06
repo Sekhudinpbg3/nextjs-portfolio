@@ -141,7 +141,7 @@ export function SectionAbout() {
             lg={{ span: 12 }}
             span={24}>
             <div>
-              <h2 ref={title_} className={`${css['about_me']} text_title text-white font-black text-2xl mb-1
+              <h2 ref={title_} className={`${css['about_me']} text_title text-white font-black text-2xl mb-5
                 md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
                 About Me
               </h2>

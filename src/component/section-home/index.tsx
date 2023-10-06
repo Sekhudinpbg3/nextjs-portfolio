@@ -40,7 +40,7 @@ export function SectionHome() {
     <section id="home" className="section flex_centerxy">
       <div id="overlay_home" className={`absolute w-full h-full`} />
       <div className={`section_container flex_centerxy`}>
-        <Row className={`flex_centerxy h-full lg:h-2/3`}>
+        <Row className={`h-full lg:h-2/3 flex justify-items-center items-center lg:items-end`}>
           <Col className={`h-fit lg:h-full pt-20 lg:pt-0 `}
             span={24}
             lg={{ span: 10 }}>

@@ -47,17 +47,10 @@ export function Header() {
             <PartNavMenu />
           </Col>
 
-          <Col className="flex_centery"
+          <Col className="flex_centery space-x-2"
             order={3}
             md={{ order: 1 }}>
-            <Tooltip
-              title="Resume"
-              placement="bottomRight"
-              color="rgb(0 0 0 / 0.5)">
-              <>
-                <PartResumeButton className="hidden md:flex_centerxy mr-2" />
-              </>
-            </Tooltip>
+            <PartResumeButton/>
             <ThemeToggle />
           </Col>
         </Row>

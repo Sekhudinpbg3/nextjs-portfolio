@@ -121,7 +121,7 @@ export function SectionSkills() {
       <div id="overlay_skills" className={`absolute w-full h-full`} />
       <div className={`section_container flex_centerxy flex-col py-20`}>
         <div className={`flex_centery flex-col mb-4 lg:mb-5`}>
-          <h3 ref={title_} className={`${css['skills']} text_title mb-1 font-black text-2xl
+          <h3 ref={title_} className={`${css['skills']} text_title mb-5 font-black text-2xl
           md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
             Skills
           </h3>
@@ -166,7 +166,7 @@ export function SectionSkills() {
                                 fillClass="fill-gray-500 dark:fill-slate-500"
                                 src={icon} />
                             </Col>
-                            
+
                             <Col span={"auto"}>
                               <h4 className="text_regular font-semibold">{name}</h4>{
                                 level === 'Basic' ? (

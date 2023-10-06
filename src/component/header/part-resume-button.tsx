@@ -1,25 +1,37 @@
-import { Button } from "antd";
+import { Tooltip } from "antd";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Icon } from "@provider/asset";
-import css from './style.module.css';
 
-interface Props {
-  className?: string | undefined;
-}
-
-export function PartResumeButton({ className }: Props) {
+export function PartResumeButton() {
   return (
-    <Button className={`${className} ${css['bt_resume']}
-     text-gray-100 bg-blue-600 hover:drop-shadow-lg dark:bg-blue-700 duration-500`}
-      type='link'
-      icon={
-        <>
-          <Icon
-            src={AiOutlineDownload}
-            fillClass={`text-gray-100`}
-          />
-        </>}>
-      Resume
-    </Button>
+    <button className="hidden md:block"
+      name="resume-button"
+      aria-label="resume-button">
+      <span className={`text_regular space-x-1
+        hidden lg:flex items-center group`}>
+        <span className="group-hover:text-blue-700 duration-500">
+          Resume
+        </span>
+        <Icon className="group-hover:fill-blue-700 duration-300"
+          sizeClass="w-5 h-5"
+          fillClass="fill-gray-700 dark:fill-gray-300"
+          src={AiOutlineDownload} />
+      </span>
+
+      <span className={`block lg:hidden h-7 w-7 p-1 rounded-full
+        hover_blur duration-500`}>
+        <Tooltip
+          title="Resume"
+          placement="bottom"
+          color={`rgb(0 0 0 / 0.5)`}>
+          <>
+            <Icon
+              sizeClass="w-5 h-5"
+              fillClass="fill-gray-700 dark:fill-gray-300"
+              src={AiOutlineDownload} />
+          </>
+        </Tooltip>
+      </span>
+    </button>
   )
 }

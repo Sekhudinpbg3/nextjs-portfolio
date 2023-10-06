@@ -11,7 +11,7 @@ import { Menu, MenuItems } from "@provider/antd/util";
 import { Icon } from '@provider/asset';
 import { MenuKey } from './interface';
 
-export const MENU_KEY: MenuKey[] = ['home', 'about', 'skills', 'portfolio', 'contact']
+export const MENU_KEY: MenuKey[] = ['home', 'about', 'skills', 'project', 'contact']
 export const DEF_SELECTED_MENU: MenuKey[] = ['home']
 export const MENU_ITEMS: MenuItems = [
   Menu.item<MenuKey>(
@@ -27,7 +27,7 @@ export const MENU_ITEMS: MenuItems = [
     <div className='block md:hidden'><BsCodeSlash /></div>
   ),
   Menu.item<MenuKey>(
-    <Typography.Link href='#portfolio' className='menu_item_title'>Portfolio</Typography.Link>, 'portfolio',
+    <Typography.Link href='#project' className='menu_item_title'>Project</Typography.Link>, 'project',
     <div className='block md:hidden'><AiOutlinePaperClip /></div>
   ),
   Menu.item<MenuKey>(
@@ -38,8 +38,8 @@ export const MENU_ITEMS: MenuItems = [
     <p className='menu_item_title block md:hidden'>Resume</p>, 'resume',
     <Icon src={AiOutlineDownload}
       divClass='block md:hidden -ml-1.5 mt-1.5'
-      className='p-1 rounded-full bg-blue-600'
-      fillClass='fill-gray-100'
+      className='bg-blue-600/20 p-1 rounded-full'
+      fillClass='fill-blue-700'
       sizeClass='h-7 w-7' />
   )
 ];
