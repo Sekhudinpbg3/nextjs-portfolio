@@ -23,12 +23,12 @@ export default function Home() {
         <SectionProject />
         <SectionContact />
         <FloatButton.BackTop
+          aria-label="back-to-top"
           type="primary"
           shape={"circle"}
           duration={1000}
           icon={
-            <Icon
-              fillClass="fill-gray-100"
+            <Icon fillClass="fill-gray-100"
               src={AiOutlineArrowUp} />
           } />
       </Layout.Content>

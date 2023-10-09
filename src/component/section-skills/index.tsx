@@ -145,8 +145,8 @@ export function SectionSkills() {
                 key={key}
                 md={{ span: 12 }}
                 span={24}>
-                <div ref={cardChild_[key]} className={`card_regular h-fit md:h-full flex_centery flex-col p-5`}>
-                  <h3 className={`text-base lg:text-lg font-bold text-blue-600`}>
+                <div ref={cardChild_[key]} className={`card_regular text_regular h-fit md:h-full flex_centery flex-col p-5`}>
+                  <h3 className={`text-base lg:text-lg font-bold`}>
                     {skillType}
                   </h3>
 
@@ -155,7 +155,9 @@ export function SectionSkills() {
                     gutter={[10, 20]}>{
                       skills.map(({ name, level, icon }, key2) => (
                         <Col key={key2}
-                          lg={{ span: 8 }}
+                          sm={{ span: 8 }}
+                          md={{ span: 12 }}
+                          xxl={{ span: 8 }}
                           span={12}>
                           <Row className="w-full"
                             justify={"start"}
@@ -168,13 +170,13 @@ export function SectionSkills() {
                             </Col>
 
                             <Col span={"auto"}>
-                              <h4 className="text_regular font-semibold">{name}</h4>{
+                              <p className="text_regular font-semibold">{name}</p>{
                                 level === 'Basic' ? (
-                                  <h5 className="text-sm font-medium text-blue-600 dark:text-blue-700">{level}</h5>
+                                  <p className="text-sm font-medium text-blue-600 dark:text-sky-600">{level}</p>
                                 ) : level === 'Intermediate' ? (
-                                  <h5 className="text-sm font-medium text-green-600 dark:text-green-700">{level}</h5>
+                                  <p className="text-sm font-medium text-green-600 dark:text-emerald-600">{level}</p>
                                 ) :
-                                  <h5 className="text-sm font-medium text-purple-600 dark:text-purple-700">{level}</h5>
+                                  <p className="text-sm font-medium text-purple-600 dark:text-purple-700">{level}</p>
                               }</Col>
                           </Row>
                         </Col>

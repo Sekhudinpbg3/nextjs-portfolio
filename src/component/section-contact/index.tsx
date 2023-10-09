@@ -12,7 +12,7 @@ export function SectionContact() {
       <div className={`section_container flex_centerxy flex-col py-20`}>
         <div className={`flex_centery flex-col mb-5`}>
           <h3 className={`${css['contact']} text_title mb-5 font-black text-2xl
-          md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
+            md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
             {"Let's Talk"}
           </h3>
           <p className="text_regular text-base lg:text-lg text-center px-2 md:px-5">
@@ -74,14 +74,15 @@ export function SectionContact() {
                     }} />
                 </Form.Item>
                 <Form.Item>
-                  <button className={`button_primary flex_centery space-x-2
+                  <button className={`group button_primary flex_centery space-x-2
                     rounded-md py-1.5 px-5 ring-2 font-semibold`}
                     name="send-button"
                     aria-label="send-button">
                     <span>Send</span>
                     <Icon
                       sizeClass="w-4 h-4"
-                      fillClass="fill-blue-600 dark:fill-blue-700"
+                      fillClass={`fill-blue-600 dark:fill-blue-700
+                      dark:group-hover:fill-gray-300 duration-500`}
                       src={BsSendFill} />
                   </button>
                 </Form.Item>
@@ -106,13 +107,11 @@ export function SectionContact() {
                         sizeClass="w-8 xl:w-10 h-8 xl:h-10"
                         src={icon} />
                       <div className="w-full">
-                        <Typography.Title className="text_regular w-full flex justify-between mb-0.5"
-                          level={5}
-                          copyable={{
-
-                          }}>
+                        <Typography.Paragraph className={`text_regular w-full flex justify-between mb-0.5
+                          text-sm lg:text-base font-semibold`}
+                          copyable={{}}>
                           {address}
-                        </Typography.Title>
+                        </Typography.Paragraph>
                         <p className="text-xs lg:text-sm text-green-600 dark:text-green-700">
                           {type}
                         </p>
@@ -121,12 +120,12 @@ export function SectionContact() {
                             <a className="mt-2 w-fit flex_centery text-xs group"
                               target="_blank"
                               href={anchor.href}>
-                              <span className={`text-blue-600 dark:text-blue-700`}>
+                              <span className={`text-blue-600 dark:text-gray-300`}>
                                 {anchor.text}
                               </span>
                               <Icon className={`opacity-0 -translate-x-4
                                   group-hover:opacity-100 group-hover:translate-x-0 duration-700`}
-                                fillClass={`fill-blue-600 dark:fill-blue-700`}
+                                fillClass={`fill-blue-600 dark:fill-gray-300`}
                                 src={BsArrowRightShort} />
                             </a>
                           ) : null

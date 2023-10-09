@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Row, Col } from "antd";
 import { Img } from '@provider/asset';
 import { useGsapFromTo } from "@provider/animation";
-import { useWindowEvent, isSection, useWindowLoad } from "@provider/hooks";
+import { useWindowEvent, isSection } from "@provider/hooks";
 import { PartText } from './part-text';
 
 const { profile } = Img
@@ -40,7 +40,7 @@ export function SectionHome() {
     <section id="home" className="section flex_centerxy">
       <div id="overlay_home" className={`absolute w-full h-full`} />
       <div className={`section_container flex_centerxy`}>
-        <Row className={`h-full lg:h-2/3 flex justify-items-center items-center lg:items-end`}>
+        <Row className={`h-full lg:h-2/3 flex items-center lg:items-end`}>
           <Col className={`h-fit lg:h-full pt-20 lg:pt-0 `}
             span={24}
             lg={{ span: 10 }}>

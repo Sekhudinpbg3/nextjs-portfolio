@@ -5,7 +5,7 @@ export const SOSMEDS: SocialMedia[] = [
   {
     type: "Instagram",
     username: "@Sekhudin_y",
-    url: "",
+    url: "https://www.instagram.com/sekhudin_y",
     icon: SiInstagram,
   },
   {
@@ -17,7 +17,7 @@ export const SOSMEDS: SocialMedia[] = [
   {
     type: "LinkedIn",
     username: "Sekhudin pbg3",
-    url: "https://www.linkedin.com/in/sekhudin-pbg3-714705219/",
+    url: "https://www.linkedin.com/in/sekhudin-pbg3-714705219",
     icon: SiLinkedin,
   },
 ];

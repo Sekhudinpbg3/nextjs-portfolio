@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Row, Col } from "antd";
 import { Icon, Img } from "@provider/asset";
 import { Gsap, useGsapFromTo } from "@provider/animation";
-import { isSection, useWindowEvent, useWindowLoad } from "@provider/hooks";
+import { isSection, useWindowEvent } from "@provider/hooks";
 import { COURSES } from "./const";
 import css from './style.module.css';
 
@@ -152,8 +152,8 @@ export function SectionAbout() {
                 and praising pain was born.
               </p>
 
-              <div ref={cards_} className={`card_regular h-fit md:h-full flex_centery flex-col p-5 mt-10`}>
-                <h3 ref={subTittle_} className={`text-base lg:text-lg font-black text-blue-600`}>
+              <div ref={cards_} className={`card_regular text_regular flex_centery flex-col h-fit md:h-full p-5 mt-10`}>
+                <h3 ref={subTittle_} className={`text-base lg:text-lg font-black`}>
                   Related Course
                 </h3>
 

@@ -17,59 +17,121 @@
 
 @layer components {
   .flex_centerx {
-    @apply flex justify-center !important;
+    @apply flex
+    justify-center
+    !important;
   }
   .flex_centery {
-    @apply flex items-center !important;
+    @apply flex
+    items-center
+    !important;
   }
   .flex_centerxy {
-    @apply flex justify-center items-center !important;
+    @apply flex
+    justify-center
+    items-center
+    !important;
   }
   .grid_centerx {
-    @apply grid justify-items-center !important;
+    @apply grid
+    justify-items-center
+    !important;
   }
   .grid_centery {
-    @apply grid content-center !important;
+    @apply grid
+    content-center
+    !important;
   }
   .grid_centerxy {
-    @apply grid justify-items-center content-center !important;
+    @apply grid
+    justify-items-center
+    content-center
+    !important;
   }
   .hover_blur {
-    @apply hover:bg-transparent/10 dark:hover:bg-white/10 hover:backdrop-blur-sm duration-500 !important;
+    @apply hover:backdrop-blur-sm
+    hover:bg-transparent/10
+    dark:hover:bg-white/10
+    duration-500
+    !important;
   }
   .drawer_navigation {
-    @apply bg-white/40 dark:bg-transparent/40 backdrop-blur-sm 
-    backdrop-brightness-150 dark:backdrop-brightness-50 drop-shadow-lg !important;
+    @apply bg-white/40
+    drop-shadow-lg
+    backdrop-blur-sm
+    backdrop-brightness-150
+    dark:bg-transparent/40
+    dark:backdrop-brightness-50
+    !important;
   }
   .header_scroll {
-    @apply bg-white/40 dark:bg-slate-900/40 backdrop-blur-sm
-    backdrop-brightness-150 dark:backdrop-brightness-50 !important;
+    @apply bg-white/40
+    backdrop-blur-sm
+    backdrop-brightness-150
+    dark:bg-slate-900/40
+    dark:backdrop-brightness-50
+    !important;
   }
   .footer_class {
-    @apply bg-white dark:bg-slate-900 backdrop-blur-md py-20
-    backdrop-brightness-150 dark:backdrop-brightness-50 !important;
+    @apply bg-white
+    backdrop-blur-md
+    backdrop-brightness-150
+    py-20
+    dark:bg-slate-900
+    dark:backdrop-brightness-50
+    !important;
   }
   .menu_item_title {
-    @apply text-sm lg:text-base !important;
+    @apply text-sm
+    lg:text-base
+    !important;
   }
   .section {
-    @apply min-h-screen relative !important;
+    @apply min-h-screen
+    relative
+    !important;
   }
   .section_container {
-    @apply relative px-4 w-full lg:w-11/12 xl:w-10/12 2xl:w-9/12 !important;
+    @apply relative
+    w-full
+    px-4
+    lg:w-11/12
+    xl:w-10/12
+    2xl:w-9/12
+    !important;
   }
   .text_regular {
-    @apply text-gray-700 dark:text-gray-300 !important;
+    @apply text-gray-700
+    dark:text-gray-300
+    !important;
   }
   .text_title {
-    @apply text-white dark:text-gray-300 !important;
+    @apply text-blue-600
+    dark:text-blue-700
+    !important;
+  }
+  .text_title_name {
+    @apply text-white
+    dark:text-gray-300
+    !important;
   }
   .card_regular {
-    @apply rounded-md lg:rounded-xl bg-white dark:bg-slate-900 
-    drop-shadow-xl !important;
+    @apply bg-white
+    rounded-md
+    drop-shadow-xl
+    lg:rounded-xl
+    dark:bg-slate-900
+     !important;
   }
   .button_primary {
-    @apply text-blue-600 hover:text-blue-700 ring-blue-500 
-    bg-blue-600 bg-opacity-10 hover:bg-opacity-30 duration-500 !important;
+    @apply bg-opacity-10
+    bg-blue-600
+    text-blue-600
+    ring-blue-600
+    hover:bg-opacity-30
+    hover:text-blue-700
+    dark:hover:text-gray-300
+    duration-500
+    !important;
   }
 }

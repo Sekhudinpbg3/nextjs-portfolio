@@ -38,7 +38,7 @@ export const MENU_ITEMS: MenuItems = [
     <p className='menu_item_title block md:hidden'>Resume</p>, 'resume',
     <Icon src={AiOutlineDownload}
       divClass='block md:hidden -ml-1.5 mt-1.5'
-      className='bg-blue-600/20 p-1 rounded-full'
+      className='rounded-full p-1 bg-blue-600/10 dark:bg-white/10'
       fillClass='fill-blue-700'
       sizeClass='h-7 w-7' />
   )

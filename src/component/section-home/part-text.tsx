@@ -15,69 +15,82 @@ export function PartText() {
   const as_ = useRef(null);
   const desc_ = useRef(null);
   const hire_ = useRef(null);
+  const sosmed_ = useRef(null);
 
-  const tweens = useGsapFromTo(name_, [{
-    target: hello_,
-    from: {
-      display: 'none',
-      opacity: 0,
-      translateX: -250
+  const tweens = useGsapFromTo(name_, [
+    {
+      target: hello_,
+      from: {
+        opacity: 0,
+        translateX: -200
+      },
+      to: {
+        opacity: 1,
+        translateX: 0,
+        ease: Gsap.ease('sine')
+      }
     },
-    to: {
-      display: 'block',
-      opacity: 1,
-      translateX: 0,
-      ease: Gsap.ease('sine')
-    }
-  }, {
-    target: name_,
-    from: {
-      display: 'none',
-      opacity: 0,
-      translateY: -250
+    {
+      target: name_,
+      from: {
+        opacity: 0,
+        translateX: 200
+      },
+      to: {
+        opacity: 1,
+        translateX: 0,
+        ease: Gsap.ease('sine')
+      }
     },
-    to: {
-      display: 'block',
-      opacity: 1,
-      translateY: 0,
-      ease: Gsap.ease('back.inOut')
-    }
-  }, {
-    target: as_,
-    from: {
-      display: 'none',
-      opacity: 0,
-      translateX: 250
+    {
+      target: as_,
+      from: {
+        opacity: 0,
+        translateX: 200
+      },
+      to: {
+        opacity: 1,
+        translateX: 0,
+        ease: Gsap.ease('sine')
+      }
     },
-    to: {
-      display: 'block',
-      opacity: 1,
-      translateX: 0,
-      ease: Gsap.ease('sine')
-    }
-  }, {
-    target: desc_,
-    from: {
-      display: 'none',
-      opacity: 0,
-      translateX: -250
+    {
+      target: desc_,
+      from: {
+        opacity: 0,
+        translateX: -200
+      },
+      to: {
+        opacity: 1,
+        translateX: 0,
+        ease: Gsap.ease('sine')
+      }
     },
-    to: {
-      display: 'block',
-      opacity: 1,
-      translateX: 0,
-      ease: Gsap.ease('sine')
-    }
-  }, {
-    target: hire_,
-    from: {
-      opacity: 0,
+    {
+      target: hire_,
+      from: {
+        opacity: 0,
+        translateX: -200
+      },
+      to: {
+        opacity: 1,
+        translateX: 0,
+        ease: Gsap.ease('sine')
+      }
     },
-    to: {
-      opacity: 1,
-      ease: Gsap.ease('sine')
+    {
+      target: sosmed_,
+      from: {
+        opacity: 0,
+        translateX: 200,
+      },
+      to: {
+        opacity: 1,
+        translateX: 0,
+        ease: Gsap.ease('sine')
+      }
     }
-  }], 1)
+  ], 1)
 
   const tweenHandler = () => {
     for (const tween of tweens) {
@@ -93,14 +106,14 @@ export function PartText() {
   useWindowEvent("scroll", tweenHandler)
 
   return (
-    <div ref={parent_} className={`h-full grid grid-cols-1 content-end mb-5
+    <div ref={parent_} className={`h-full grid grid-cols-1 content-end mb-5 lg:mb-0
       justify-items-center lg:justify-items-start text-center lg:text-start`}>
-      <h2 ref={hello_} className={`${lato.className} ${css['hello']} w-full font-black text-yellow-500
-        mt-0.5 md:mt-2 text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl`}>
+      <h2 ref={hello_} className={`${lato.className} ${css['hello']} w-full font-black 
+      text-yellow-500 mt-0.5 md:mt-2 text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl`}>
         Hello,
       </h2>
-      <h2 ref={name_} className={`${inter.className} ${css['name']} text_title w-full font-black
-        mt-2 md:mt-4 text-3xl md:text-4xl lg:text-5xl 2xl:text-7xl`}>
+      <h2 ref={name_} className={`${inter.className} ${css['name']} text_title_name w-full 
+        font-black mt-2 md:mt-4 text-3xl md:text-4xl lg:text-5xl 2xl:text-7xl`}>
         I Am Sekhudin
       </h2>
       <h3 ref={as_} className={`${inter.className} ${css['as']} w-full font-bold text-blue-600
@@ -120,7 +133,9 @@ export function PartText() {
           lg:text-lg py-2 px-4 lg:px-6 rounded-full bg-blue-600 text-gray-100
           group hover:drop-shadow-lg dark:bg-blue-700 duration-500`}
           onClick={() => { tweens[0].restart() }} >
-          <span className={`translate-x-4 group-hover:-translate-x-0 duration-500`}>Hire Me</span>
+          <span className={`translate-x-4 group-hover:-translate-x-0 duration-500`}>
+            Hire Me
+          </span>
           <span>
             <Icon src={AiOutlineArrowRight}
               fillClass='fill-gray-100 opacity-0 -translate-x-4'
@@ -128,7 +143,7 @@ export function PartText() {
             />
           </span>
         </button>
-        <div className="hidden lg:flex items-center space-x-3">
+        <div ref={sosmed_} className="hidden lg:flex items-center space-x-3">
           <PartSocialMedia />
         </div>
       </div>

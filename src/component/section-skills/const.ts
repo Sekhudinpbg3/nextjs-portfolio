@@ -24,6 +24,7 @@ import {
   SiDotnet,
   SiGit,
   SiRedux,
+  SiReactivex,
 } from "react-icons/si";
 import { Skills } from "./interface";
 
@@ -175,6 +176,11 @@ export const SKILLS: Skills[] = [
         name: "Redux",
         level: "Basic",
         icon: SiRedux,
+      },
+      {
+        name: "RxJS",
+        level: "Basic",
+        icon: SiReactivex,
       },
     ],
   },
