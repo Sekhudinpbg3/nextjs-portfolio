@@ -1,4 +1,4 @@
-import { Carousel, Row, Col } from "antd";
+import { Row, Col } from "antd";
 import { LiaRocketSolid } from "react-icons/lia";
 import { Icon } from "@provider/asset";
 import { PartProjects } from "./part-projects";

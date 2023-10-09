@@ -12,6 +12,11 @@ div.ant-menu-item-icon {
   margin-left: -2px !important;
 }
 
-.dots_class {
-  background-color: pink !important;
+/* for carousel dots */
+.dots_class li {
+  background-color: white !important;
+}
+
+.slick-dots li.slick-active button {
+  background-color: rgb(37 99 235 / 1) !important;
 }

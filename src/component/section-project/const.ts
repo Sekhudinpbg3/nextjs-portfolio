@@ -1,8 +1,22 @@
-import { SiLaravel, SiReact, SiTailwindcss, SiMysql, SiRedux } from "react-icons/si";
-import { Img, ImageSource } from "@provider/asset";
+import {
+  SiLaravel,
+  SiReact,
+  SiTailwindcss,
+  SiMysql,
+  SiRedux,
+  SiFirebase,
+  SiNextdotjs,
+  SiTensorflow,
+  SiDotnet,
+  SiMicrosoftsqlserver,
+  SiNodedotjs,
+  SiMongodb,
+  SiExpress,
+} from "react-icons/si";
+import { Img } from "@provider/asset";
 import { Project } from "./interface";
 
-const { profile, ExProject } = Img;
+const { ExProject } = Img;
 export const PROJECTS: Project[] = [
   {
     name: "Laravel To Do List",
@@ -11,21 +25,33 @@ export const PROJECTS: Project[] = [
     stacks: [SiLaravel, SiReact, SiTailwindcss, SiMysql],
   },
   {
-    name: "Jersi Store",
+    name: "Jersey Store",
     type: "Mobile",
     images: ExProject,
-    stacks: [SiReact, SiRedux],
+    stacks: [SiReact, SiRedux, SiFirebase],
   },
   {
-    name: "Jersi Store",
-    type: "Mobile",
+    name: "Stock Forecasting",
+    type: "Web Fullstack",
     images: ExProject,
-    stacks: [SiReact, SiRedux],
+    stacks: [SiNextdotjs, SiTailwindcss, SiTensorflow],
   },
   {
-    name: "Jersi Store",
-    type: "Mobile",
+    name: "Attendance Application",
+    type: "Dekstop",
     images: ExProject,
-    stacks: [SiReact, SiRedux],
+    stacks: [SiDotnet, SiMicrosoftsqlserver],
+  },
+  {
+    name: "Cashier Application",
+    type: "Dekstop",
+    images: ExProject,
+    stacks: [SiDotnet, SiMicrosoftsqlserver],
+  },
+  {
+    name: "MERN Stack CRUD",
+    type: "Web Fullstack",
+    images: ExProject,
+    stacks: [SiReact, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb],
   },
 ];

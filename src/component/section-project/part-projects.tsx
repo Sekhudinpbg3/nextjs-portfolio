@@ -25,12 +25,11 @@ export function PartProjects() {
   return (
     <Carousel className={`overflow-hidden cursor-grab select-none`}
       dots={{ className: "dots_class" }}
-      autoplay={true}
+      autoplay={false}
       pauseOnHover={true}
       draggable={true}
       infinite={true}
       slidesToShow={3}
-      slidesToScroll={1}
       speed={2000}
       autoplaySpeed={5000}
       lazyLoad={'progressive'}
@@ -39,7 +38,7 @@ export function PartProjects() {
         <div className="px-5 lg:px-7 xl:px-3"
           key={key}>
           <div className={`flex flex-col w-full mb-8`}>
-            <div className="w-full bg-green-200">
+            <div className="w-full">
               <Carousel className="w-full"
                 dots={false}
                 effect="fade"
