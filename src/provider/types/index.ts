@@ -1,3 +1,2 @@
-export interface PropsChildNode {
-  children: React.ReactNode;
-}
+export * from "./const";
+export * from "./interface";

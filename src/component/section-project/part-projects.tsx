@@ -45,9 +45,9 @@ export function PartProjects() {
                 lazyLoad={'progressive'}
                 speed={2000}
                 autoplaySpeed={5000}
-                autoplay={true}>
+                autoplay={false}>
                 {images.map(({ src, alt }, imgKey) => (
-                  <div key={imgKey} className="w-full h-[400px]">
+                  <div key={imgKey} className="w-full h-[500px]">
                     <Image className={`object-cover w-full h-full hover:scale-150
                       transition-all duration-500`}
                       src={src}

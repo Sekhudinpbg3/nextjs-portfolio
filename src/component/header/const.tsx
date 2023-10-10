@@ -6,40 +6,61 @@ import {
   AiOutlineDownload
 } from "react-icons/ai";
 import { BsCodeSlash } from "react-icons/bs";
-import { MdAlternateEmail } from "react-icons/md";
-import { Menu, MenuItems } from "@provider/antd/util";
+import { MdAlternateEmail, MdConnectWithoutContact } from "react-icons/md";
+import { SOSMEDS } from "@component/section-home/const";
+import { Menu, Item, MenuItems } from "@provider/antd/util";
 import { Icon } from '@provider/asset';
-import { MenuKey } from './interface';
+import { HOME, ABOUT, SKILLS, PROJECTS, CONTACT, MenuKey } from "@provider/types";
 
-export const MENU_KEY: MenuKey[] = ['home', 'about', 'skills', 'project', 'contact']
-export const DEF_SELECTED_MENU: MenuKey[] = ['home']
+export const MENU_KEY: MenuKey[] = ['home', 'about', 'skills', 'projects', 'contact'];
+export const DEF_SELECTED_MENU: MenuKey[] = ['home'];
+
+
+const SUB_MEDSOS = SOSMEDS.map<Item>(({ username, type, url, icon: IconSosmed }, key) => (
+  Menu.item<MenuKey>(
+    <Typography.Link className='menu_item_title'
+      href={url}
+      target={'_blank'}>
+      {username}
+    </Typography.Link>,
+    `connect-me${key}` as MenuKey,
+    <Icon src={IconSosmed} />
+  )
+))
+
+
 export const MENU_ITEMS: MenuItems = [
   Menu.item<MenuKey>(
-    <Typography.Link href='#home' className='menu_item_title'>Home</Typography.Link>, 'home',
+    <Typography.Link href={HOME.href} className='menu_item_title'>
+      {HOME.title}</Typography.Link>, HOME.id,
     <div className='block md:hidden'><AiOutlineHome /></div>
   ),
   Menu.item<MenuKey>(
-    <Typography.Link href='#about' className='menu_item_title'>About</Typography.Link>, 'about',
+    <Typography.Link href={ABOUT.href} className='menu_item_title'>
+      {ABOUT.title}</Typography.Link>, ABOUT.id,
     <div className='block md:hidden'><AiOutlineUser /></div>
   ),
   Menu.item<MenuKey>(
-    <Typography.Link href='#skills' className='menu_item_title'>Skills</Typography.Link>, 'skills',
+    <Typography.Link href={SKILLS.href} className='menu_item_title'>
+      {SKILLS.title}</Typography.Link>, SKILLS.id,
     <div className='block md:hidden'><BsCodeSlash /></div>
   ),
   Menu.item<MenuKey>(
-    <Typography.Link href='#project' className='menu_item_title'>Project</Typography.Link>, 'project',
+    <Typography.Link href={PROJECTS.href} className='menu_item_title'>
+      {PROJECTS.title}</Typography.Link>, PROJECTS.id,
     <div className='block md:hidden'><AiOutlinePaperClip /></div>
   ),
   Menu.item<MenuKey>(
-    <Typography.Link href='#contact' className='menu_item_title'>Contact</Typography.Link>, 'contact',
+    <Typography.Link href={CONTACT.href} className='menu_item_title'>
+      {CONTACT.title}</Typography.Link>, CONTACT.id,
     <div className='block md:hidden'><MdAlternateEmail /></div>
   ),
-  Menu.item<string>(
+  Menu.sub<MenuKey>(
+    <p className='menu_item_title block md:hidden'>Connect Me</p>, 'connect-me', SUB_MEDSOS,
+    <div className='block md:hidden'><MdConnectWithoutContact /></div>
+  ),
+  Menu.item<MenuKey>(
     <p className='menu_item_title block md:hidden'>Resume</p>, 'resume',
-    <Icon src={AiOutlineDownload}
-      divClass='block md:hidden -ml-1.5 mt-1.5'
-      className='rounded-full p-1 bg-blue-600/10 dark:bg-white/10'
-      fillClass='fill-blue-700'
-      sizeClass='h-7 w-7' />
-  )
+    <div className='block md:hidden'><AiOutlineDownload /></div>
+  ),
 ];

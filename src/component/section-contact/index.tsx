@@ -1,4 +1,4 @@
-import { Row, Col, Form, Input, Button, Typography } from "antd";
+import { Row, Col, Form, Input, Typography } from "antd";
 import { BsSendFill, BsArrowRightShort } from "react-icons/bs";
 import { Icon } from "@provider/asset";
 import { CONTACTS } from "./const";
@@ -95,7 +95,7 @@ export function SectionContact() {
             lg={{ span: 10 }}
             xxl={{ span: 8 }}
             span={24}>
-            <Row className="w-full" gutter={[10, 10]}>
+            <Row className="w-full" gutter={[0, 10]}>
               {
                 CONTACTS.map(({ address, type, icon, anchor }, key) => (
                   <Col

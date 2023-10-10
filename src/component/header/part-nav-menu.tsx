@@ -4,8 +4,9 @@ import { Menu, Drawer, Avatar } from 'antd';
 import { AiOutlineMenu, AiOutlineDoubleRight } from 'react-icons/ai';
 import { Icon, Img } from '@provider/asset';
 import { useWindowMedia, useWindowEvent, activeSection, useWindowLoad } from '@provider/hooks';
+import { MenuKey } from "@provider/types";
 import { MENU_ITEMS, DEF_SELECTED_MENU, MENU_KEY } from './const';
-import { MenuKey, MenuOnSelect } from './interface';
+import { MenuOnSelect } from './interface';
 
 
 const { profile } = Img
@@ -33,7 +34,7 @@ export function PartNavMenu() {
     setOpen(false);
   }
 
-  useWindowMedia('md', () => setOpen(false));
+  useWindowMedia('md', closeDrawer);
   useWindowLoad(menuEventHandler);
   useWindowEvent("scroll", menuEventHandler);
 
@@ -50,13 +51,7 @@ export function PartNavMenu() {
 
       <Drawer rootClassName={`block md:hidden px-0 bg-transparent`}
         className='drawer_navigation overflow-hidden'
-        title={(
-          <Avatar className={`
-           bg-gray-600 my-2 justify-self-center
-            cursor-pointer`}
-            src={profile.url}
-            size={55} />
-        )}
+        title={<div className='w-5 h-5' />}
         open={open}
         placement="left"
         width={"fit-content"}
@@ -75,12 +70,15 @@ export function PartNavMenu() {
         onClose={closeDrawer}
         footer={(
           <button className={`
-            ${collapse ? '' : 'rotate-180'} flex_centerxy
-            h-7 w-7 rounded-full duration-500 hover_blur`}
+            ${collapse ? '' : 'rotate-180'} group duration-500 my-2 rounded-full
+            flex_centerxy h-8 w-8 hover:bg-black/10 hover:dark:bg-white/10`}
             name='menu-collaps'
             aria-label='menu-collaps'
             onClick={() => setCollapse(!collapse)}>
-            <AiOutlineDoubleRight />
+            <Icon
+              sizeClass='w-6 h-6'
+              fillClass='fill-gray-600 dark:fill-blue-600'
+              src={AiOutlineDoubleRight} />
           </button>
         )}>
         <Menu className={`border-none bg-transparent`}
@@ -90,7 +88,7 @@ export function PartNavMenu() {
           selectedKeys={activeMenu}
           onSelect={menuOnSelect}
           inlineCollapsed={collapse}
-          disabledOverflow={true}
+          triggerSubMenuAction='hover'
           onClick={closeDrawer} />
       </Drawer>
 

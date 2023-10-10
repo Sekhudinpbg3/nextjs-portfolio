@@ -6,8 +6,8 @@ import css from "./style.module.css";
 
 export function SectionProject() {
   return (
-    <section id="project" className="section flex justify-center">
-      <div id="overlay_project" className={`absolute w-full h-full`} />
+    <section id="projects" className="section flex justify-center">
+      <div id="overlay_projects" className={`absolute w-full h-full`} />
       <div className={`section_container flex_centerxy flex-col py-20`}>
         <Row className={'w-full'}
           justify={"center"}

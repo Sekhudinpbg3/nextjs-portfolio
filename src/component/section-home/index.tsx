@@ -53,7 +53,7 @@ export function SectionHome() {
             lg={{ span: 14 }}>
             <div ref={parent_} className={`h-full w-full flex items-end
               justify-center lg:justify-end `}>
-              <Image ref={img_} className={`object-cover`}
+              <Image ref={img_} className={`object-cover backdrop-blur-md bg-opacity-25`}
                 id='profile_img'
                 src={profile.src}
                 alt={profile.alt}

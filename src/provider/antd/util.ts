@@ -19,6 +19,7 @@ type SubOpt = Omit<SubMenuType, "label" | "key" | "icon" | "children">;
 type GroupOpt = Omit<MenuItemGroupType, "label" | "key" | "children">;
 type DividerOpt = Omit<MenuDividerType, "type" | "dashed">;
 
+export type Item = ItemType;
 export type MenuItems = ItemType[];
 
 export class Menu {

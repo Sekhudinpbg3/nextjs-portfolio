@@ -1,7 +1,7 @@
 "use client"
 import { createContext, useContext, useState } from "react";
 import * as _ from 'lodash'
-import { PropsChildNode } from "@provider/types";
+import { PropsChildNode } from "src/provider/types/interface";
 import { AntdProvider } from "../provider";
 import { LIGHT_ALG, DARK_ALG, THEME_KEY } from "../const";
 

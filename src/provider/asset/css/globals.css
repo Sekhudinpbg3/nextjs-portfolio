@@ -76,7 +76,6 @@
     @apply bg-white
     backdrop-blur-md
     backdrop-brightness-150
-    py-20
     dark:bg-slate-900
     dark:backdrop-brightness-50
     !important;
@@ -95,6 +94,14 @@
     @apply relative
     w-full
     px-4
+    lg:w-11/12
+    xl:w-10/12
+    2xl:w-9/12
+    !important;
+  }
+  .footer_container {
+    @apply relative
+    w-full
     lg:w-11/12
     xl:w-10/12
     2xl:w-9/12

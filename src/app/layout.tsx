@@ -1,5 +1,5 @@
 import '@provider/asset/css/globals.css';
-import { PropsChildNode } from "@provider/types";
+import { PropsChildNode } from "src/provider/types/interface";
 import { AntdStyleRegistry } from "@provider/antd";
 import { Meta } from "@provider/meta";
 

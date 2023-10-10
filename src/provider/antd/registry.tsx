@@ -4,7 +4,7 @@ import { StyleProvider, createCache, extractStyle } from '@ant-design/cssinjs';
 import { useServerInsertedHTML } from 'next/navigation';
 import type Entity from '@ant-design/cssinjs/es/Cache';
 import { IconContext } from "react-icons";
-import { PropsChildNode } from "@provider/types"
+import { PropsChildNode } from "src/provider/types/interface"
 import { ThemeProvider } from './theme/context';
 import { AntdProvider } from './provider';
 import { Antd } from "./util";

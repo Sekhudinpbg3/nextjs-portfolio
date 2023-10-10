@@ -3,7 +3,8 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Gsap, useGsapFromTo } from "@provider/animation";
 import { Icon, Font } from "@provider/asset";
 import { isSection, useWindowEvent } from "@provider/hooks";
-import { PartSocialMedia } from "./part-social-media";
+import { SocialMedia } from './social-media';
+import { SOSMEDS } from './const';
 import css from './style.module.css';
 
 const { inter, lato } = Font;
@@ -51,6 +52,7 @@ export function PartText() {
       to: {
         opacity: 1,
         translateX: 0,
+        duration: 2,
         ease: Gsap.ease('sine')
       }
     },
@@ -58,11 +60,9 @@ export function PartText() {
       target: desc_,
       from: {
         opacity: 0,
-        translateX: -200
       },
       to: {
         opacity: 1,
-        translateX: 0,
         ease: Gsap.ease('sine')
       }
     },
@@ -144,7 +144,15 @@ export function PartText() {
           </span>
         </button>
         <div ref={sosmed_} className="hidden lg:flex items-center space-x-3">
-          <PartSocialMedia />
+          {SOSMEDS.map(({ username, type, url, icon }, key) => (
+            <SocialMedia
+              key={key}
+              username={username}
+              type={type}
+              url={url}
+              icon={icon}
+            />
+          ))}
         </div>
       </div>
     </div>

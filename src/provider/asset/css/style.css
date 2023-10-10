@@ -114,26 +114,26 @@ html {
     radial-gradient(at 59% 49%, hsla(59, 87%, 43%, 0.18) 0px, transparent 50%);
 }
 
-#project {
+#projects {
   background-color: hsla(195, 0%, 0%, 1);
   background-image: radial-gradient(at 100% 25%, hsla(195, 71%, 48%, 0.29) 0px, transparent 50%),
     radial-gradient(at 51% 64%, hsla(195, 71%, 48%, 0.15) 0px, transparent 50%),
     radial-gradient(at 86% 57%, hsla(97, 100%, 54%, 0.26) 0px, transparent 50%);
 }
 
-#App.dark #project {
+#App.dark #projects {
   background-color: hsla(195, 50%, 93%, 1);
   background-image: radial-gradient(at 100% 25%, hsla(195, 71%, 48%, 0.4) 0px, transparent 50%),
     radial-gradient(at 45% 59%, hsla(195, 71%, 48%, 0.4) 0px, transparent 50%);
 }
 
-#overlay_project {
+#overlay_projects {
   background-color: hsla(195, 50%, 93%, 1);
   background-image: radial-gradient(at 100% 25%, hsla(195, 71%, 48%, 0.4) 0px, transparent 50%),
     radial-gradient(at 45% 59%, hsla(195, 71%, 48%, 0.4) 0px, transparent 50%);
 }
 
-#App.dark #overlay_project {
+#App.dark #overlay_projects {
   background-color: hsla(195, 0%, 0%, 1);
   background-image: radial-gradient(at 100% 25%, hsla(195, 71%, 48%, 0.29) 0px, transparent 50%),
     radial-gradient(at 51% 64%, hsla(195, 71%, 48%, 0.15) 0px, transparent 50%),
@@ -158,4 +158,12 @@ html {
   background-color: hsla(195, 0%, 0%, 1);
   background-image: radial-gradient(at 28% 42%, hsla(0, 71%, 39%, 0.29) 0px, transparent 50%),
     radial-gradient(at 72% 63%, hsla(97, 100%, 54%, 0.23) 0px, transparent 50%);
+}
+
+.footer_body {
+  background-color: hsla(195, 50%, 93%, 1);
+}
+
+#App.dark .footer_body {
+  background-color: hsla(195, 0%, 0%, 1);
 }

@@ -14,7 +14,7 @@ export function PartLogo({ textClass }: Props) {
       href='#home'
       className={`${inter.className}
       text-lg md:text-xl xl:text-2xl
-      ${text} hover:animate-pulse 
+      ${text} hover:animate-pulse invisible md:visible
       duration-500
       `}>
       Sekhudinpbg3
