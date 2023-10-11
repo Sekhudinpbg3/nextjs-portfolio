@@ -34,7 +34,7 @@ export function PartProjects() {
       autoplaySpeed={5000}
       lazyLoad={'progressive'}
       responsive={responsive}>
-      {PROJECTS.map(({ name, type, stacks, images, link }, key) => (
+      {PROJECTS.map(({ name, type, stacks, images, link, objectType }, key) => (
         <div className="px-5 lg:px-7 xl:px-3"
           key={key}>
           <div className={`flex flex-col w-full mb-8`}>
@@ -47,9 +47,10 @@ export function PartProjects() {
                 autoplaySpeed={5000}
                 autoplay={false}>
                 {images.map(({ src, alt }, imgKey) => (
-                  <div key={imgKey} className="w-full h-[500px]">
-                    <Image className={`object-cover w-full h-full hover:scale-150
-                      transition-all duration-500`}
+                  <div key={imgKey} className={`w-full h-[500px] backdrop-blur-sm
+                   bg-black/20 dark:bg-white/20`}>
+                    <Image className={`${objectType ? objectType : 'object-scale-down'}
+                      w-full h-full hover:scale-150 transition-all duration-500`}
                       src={src}
                       alt={alt} />
                   </div>

@@ -123,10 +123,11 @@
     !important;
   }
   .card_regular {
-    @apply bg-white
-    rounded-md
+    @apply rounded-md
+    bg-white
     drop-shadow-xl
     lg:rounded-xl
+    backdrop-blur-sm
     dark:bg-slate-900
      !important;
   }

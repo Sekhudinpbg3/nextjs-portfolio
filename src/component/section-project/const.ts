@@ -10,48 +10,68 @@ import {
   SiDotnet,
   SiMicrosoftsqlserver,
   SiNodedotjs,
-  SiMongodb,
   SiExpress,
+  SiNestjs,
+  SiPostgresql,
+  SiSwagger,
+  SiVite,
 } from "react-icons/si";
 import { Img } from "@provider/asset";
 import { Project } from "./interface";
 
-const { ExProject } = Img;
+// prettier-ignore
+const { 
+  AttendanceApp,
+  ChasierApp,
+  JerseyStore,
+  NestApp,
+  Stock4Casting,
+  StockApi,
+  NoImages
+ } = Img.project;
+
 export const PROJECTS: Project[] = [
-  {
-    name: "Laravel To Do List",
-    type: "Web Fullstack",
-    images: ExProject,
-    stacks: [SiLaravel, SiReact, SiTailwindcss, SiMysql],
-  },
   {
     name: "Jersey Store",
     type: "Mobile",
-    images: ExProject,
+    images: JerseyStore,
     stacks: [SiReact, SiRedux, SiFirebase],
   },
   {
     name: "Stock Forecasting",
     type: "Web Fullstack",
-    images: ExProject,
+    images: Stock4Casting,
     stacks: [SiNextdotjs, SiTailwindcss, SiTensorflow],
   },
   {
     name: "Attendance Application",
     type: "Dekstop",
-    images: ExProject,
+    images: AttendanceApp,
     stacks: [SiDotnet, SiMicrosoftsqlserver],
   },
   {
     name: "Cashier Application",
     type: "Dekstop",
-    images: ExProject,
+    images: ChasierApp,
     stacks: [SiDotnet, SiMicrosoftsqlserver],
   },
   {
-    name: "MERN Stack CRUD",
+    name: "Nest App API",
+    type: "Web Backend",
+    images: NestApp,
+    stacks: [SiNestjs, SiNodedotjs, SiPostgresql, SiSwagger],
+  },
+  {
+    name: "Stock API",
+    type: "Web Backend",
+    images: StockApi,
+    stacks: [SiNodedotjs, SiExpress],
+  },
+  {
+    name: "Laravel To Do List",
     type: "Web Fullstack",
-    images: ExProject,
-    stacks: [SiReact, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb],
+    images: NoImages,
+    stacks: [SiLaravel, SiVite, SiReact, SiTailwindcss, SiMysql],
+    objectType: "object-cover",
   },
 ];

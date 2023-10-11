@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import type { ImageSource } from "@provider/asset";
+import type { ImgSource } from "@provider/asset/image/util";
 
 type ProjectType =
   | "Web Frontend"
@@ -8,10 +8,19 @@ type ProjectType =
   | "Mobile Frontend"
   | "Mobile"
   | "Dekstop";
+
+type ObjectType =
+  | "object-fit"
+  | "object-fill"
+  | "object-cover"
+  | "object-scale-down"
+  | "object-none";
+
 export type Project = {
   name: string;
   type: ProjectType;
   stacks: IconType[];
-  images: ImageSource[];
+  images: ImgSource[];
   link?: string;
+  objectType?: ObjectType;
 };

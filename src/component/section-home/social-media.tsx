@@ -8,7 +8,7 @@ interface SocialMediaProps extends Props {
 
 export function SocialMedia({ username, icon, type, url, bgClass, fillClass }: SocialMediaProps) {
   const bg = bgClass || `bg-gray-900/10 dark:bg-white/10 
-  hover:bg-gray-900/30 dark:hover:bg-white/30`;
+  hover:bg-gray-900/30 dark:hover:bg-white/30 backdrop-blur-sm`;
   const fill = fillClass || "fill-white dark:fill-gray-300";
 
   return (

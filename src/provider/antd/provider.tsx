@@ -1,10 +1,12 @@
-import { ConfigProvider } from 'antd';
+import { ConfigProvider, App } from 'antd';
 import { ConfigProviderProps } from 'antd/lib/config-provider';
 
 export function AntdProvider({ children, ...props }: ConfigProviderProps) {
   return (
     <ConfigProvider {...props}>
-      {children}
+      <App>
+        {children}
+      </App>
     </ConfigProvider>
   )
 }

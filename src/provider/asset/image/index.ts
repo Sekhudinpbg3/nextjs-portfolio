@@ -1,26 +1,33 @@
-import { StaticImageData } from "next/image";
-import Profile from "./sekhudin_profile.png";
-import Ex1 from "./example1.jpg";
-import Ex2 from "./example2.jpg";
-import Ex3 from "./example3.jpg";
+import { AttendanceApp } from "./attendance-app";
+import { ChasierApp } from "./chasier-dotnet";
+import { JerseyStore } from "./jersey-store";
+import { NestApp } from "./nest-app";
+import { StockApi } from "./stock-api";
+import { Stock4Casting } from "./stock-forecasting";
+import Profile from "./profile-01.png";
+import NoImage from "./no-image.png";
+import { ImgSource, imgSource } from "./util";
 
-export interface ImageSource {
-  src: StaticImageData;
-  alt: string;
-  url: StaticImageData["src"];
-}
-
-function source(img: StaticImageData, alt?: string): ImageSource {
-  return {
-    src: img,
-    alt: alt || "alternative",
-    url: img.src,
-  };
-}
+type ProjectName =
+  | "AttendanceApp"
+  | "ChasierApp"
+  | "JerseyStore"
+  | "NestApp"
+  | "StockApi"
+  | "Stock4Casting"
+  | "NoImages";
 
 export class Img {
-  public static profile = source(Profile, "Sekhudin-profile");
+  public static profile = imgSource(Profile, "Sekhudin-profile");
+  public static noImage = imgSource(NoImage, "no-image");
 
-  // for example project
-  public static ExProject: ImageSource[] = [source(Ex1), source(Ex2), source(Ex3)];
+  public static project: Record<ProjectName, ImgSource[]> = {
+    AttendanceApp,
+    ChasierApp,
+    JerseyStore,
+    NestApp,
+    StockApi,
+    Stock4Casting,
+    NoImages: [imgSource(NoImage, "no-image")],
+  };
 }

@@ -2,6 +2,7 @@
 
 # ignored by me
 .lighthouse
+.env
 
 # dependencies
 /node_modules

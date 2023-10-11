@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
 
-type SkillType = "Programming language" | "Frontend Developer" | "Backend Developer" | "Other";
+type SkillType = "Programming Language" | "Frontend Developer" | "Backend Developer" | "Other";
 
 interface Skill {
   name: string;

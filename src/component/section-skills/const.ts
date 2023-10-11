@@ -30,7 +30,7 @@ import { Skills } from "./interface";
 
 export const SKILLS: Skills[] = [
   {
-    skillType: "Programming language",
+    skillType: "Programming Language",
     skills: [
       {
         name: "Javascript",
