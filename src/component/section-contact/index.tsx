@@ -23,8 +23,9 @@ export function SectionContact() {
       type: 'loading',
       content: "Sending email..."
     })
-    const result = await Email.send(v);
-    if (result) {
+
+    try {
+      await Email.send(v);
       emailForm.resetFields();
       message.open({
         key,
@@ -32,13 +33,15 @@ export function SectionContact() {
         content: "Email sent successfully!"
       })
       return setLoading(false);
+    } catch (error) {
+      message.open({
+        key,
+        type: 'error',
+        content: "Email failed to send!"
+      })
+      return setLoading(false);
+
     }
-    message.open({
-      key,
-      type: 'error',
-      content: "Email failed to send!"
-    })
-    return setLoading(false);
   }
 
 
