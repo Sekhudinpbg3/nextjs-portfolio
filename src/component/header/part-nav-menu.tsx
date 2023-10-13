@@ -39,8 +39,8 @@ export function PartNavMenu() {
 
   return (
     <>
-      <button className={`block md:hidden hover_blur
-        h-7 w-7 p-1 rounded-full`}
+      <button className={`flex justify-center items-center hover_blur
+        md:hidden h-9 w-9 p-1 rounded-full`}
         aria-label='toggle-button'
         onClick={burgerHandler}>
         <Icon

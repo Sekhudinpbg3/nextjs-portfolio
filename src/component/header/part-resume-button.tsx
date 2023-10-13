@@ -11,16 +11,16 @@ export function PartResumeButton() {
       download={cv.name}>
       <span className={`text_regular space-x-1
         hidden lg:flex items-center group`}>
-        <span className="group-hover:text-blue-700 duration-500">
+        <span className="group-hover:text-blue-700 duration-500 text-base">
           Resume
         </span>
         <Icon className="group-hover:fill-blue-700 duration-300"
-          sizeClass="w-5 h-5"
+          sizeClass="w-6 h-6"
           fillClass="fill-gray-700 dark:fill-gray-300"
           src={AiOutlineDownload} />
       </span>
 
-      <span className={`block lg:hidden h-7 w-7 p-1 rounded-full
+      <span className={`flex justify-center items-center lg:hidden h-8 w-8 p-1 rounded-full
         hover_blur duration-500`}>
         <Tooltip
           title="Resume"
@@ -28,7 +28,7 @@ export function PartResumeButton() {
           color={`rgb(0 0 0 / 0.5)`}>
           <>
             <Icon
-              sizeClass="w-5 h-5"
+              sizeClass="w-6 h-6"
               fillClass="fill-gray-700 dark:fill-gray-300"
               src={AiOutlineDownload} />
           </>

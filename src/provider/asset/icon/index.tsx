@@ -11,7 +11,7 @@ interface IconProps {
 }
 
 export function Icon({ src, divClass, rootClass, className, sizeClass, fillClass, strokeClass }: IconProps) {
-  const size = sizeClass || 'w-5 h-5';
+  const size = sizeClass || 'w-6 h-6';
   const fill = fillClass || 'fill-gray-700 dark:fill-gray-100';
   const stroke = strokeClass || 'stroke-0 stroke-gray-700 dark:stroke-gray-100';
   const classes = rootClass || `${size} ${fill} ${stroke} ${className}`;

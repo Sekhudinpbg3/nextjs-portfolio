@@ -9,23 +9,9 @@ import { TXT } from './const'
 
 export function SectionProject() {
   const parent_ = useRef(null);
-  const title_ = useRef(null);
   const desc_ = useRef(null);
-  const carousel_ = useRef(null);
 
   const tweens = useGsapFromTo(parent_, [
-    {
-      target: title_,
-      from: {
-        opacity: 0,
-        translateX: -200
-      },
-      to: {
-        opacity: 1,
-        translateX: 0,
-        ease: Gsap.ease("sine")
-      }
-    },
     {
       target: desc_,
       from: {
@@ -39,16 +25,6 @@ export function SectionProject() {
         ease: Gsap.ease("sine")
       }
     },
-    {
-      target: carousel_,
-      from: {
-        opacity: 0,
-      },
-      to: {
-        opacity: 1,
-        ease: Gsap.ease("sine")
-      }
-    }
   ], 1);
 
   const tweenHandler = () => {
@@ -75,7 +51,7 @@ export function SectionProject() {
             lg={{ span: 12 }}
             span={24}>
             <div className={`flex flex-col items-center lg:items-start`}>
-              <h3 ref={title_} className={`text_width_05 text_title mb-5 font-black text-2xl
+              <h3 className={`text_width_05 text_title mb-5 font-black text-2xl
                 md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
                 Recent Project
               </h3>
@@ -99,7 +75,7 @@ export function SectionProject() {
           </Col>
         </Row>
 
-        <div ref={carousel_} className="w-full mt-10">
+        <div className="w-full mt-10">
           <PartProjects />
         </div>
 

@@ -16,7 +16,7 @@ export function SocialMedia({ username, icon, type, url, bgClass, fillClass }: S
       href={url}
       target={"_blank"}>
       <Icon
-        sizeClass="w-5 h-5"
+        sizeClass="w-6 h-6"
         fillClass={fill}
         src={icon} />
     </a>

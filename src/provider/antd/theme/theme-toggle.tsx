@@ -2,6 +2,7 @@
 import { TagProps } from "antd";
 import { MdOutlineLightMode, MdDarkMode } from "react-icons/md";
 import { Gsap, gsapFromTo } from "@provider/animation";
+import { Icon } from "@provider/asset";
 import { useThemeContext } from './context';
 
 export function ThemeToggle(props: Omit<TagProps, 'onChange'>) {
@@ -24,15 +25,15 @@ export function ThemeToggle(props: Omit<TagProps, 'onChange'>) {
           `,
       from: { opacity: 0 },
       to: { opacity: 1, ease: Gsap.ease("sine") }
-    }, 1)
+    }, 0.5)
   }
 
   return (
-    <button className={`hover_blur h-7 w-7 p-1 rounded-full`}
+    <button className={`flex_centerxy hover_blur h-9 w-9 p-1 rounded-full`}
       name="theme-toggle"
       aria-label="theme-toggle"
       onClick={clickHandler}>
-      {isDark ? <MdDarkMode /> : <MdOutlineLightMode />}
+      <Icon src={isDark ? MdDarkMode : MdOutlineLightMode} />
     </button>
   )
 }

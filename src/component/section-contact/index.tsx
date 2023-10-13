@@ -45,24 +45,11 @@ export function SectionContact() {
 
 
   const parent_ = useRef(null);
-  const title_ = useRef(null);
   const desc_ = useRef(null);
   const mail_ = useRef(null);
   const contact_ = useRef(null);
 
   const tweens = useGsapFromTo(parent_, [
-    {
-      target: title_,
-      from: {
-        opacity: 0,
-        translateX: -200
-      },
-      to: {
-        opacity: 1,
-        translateX: 0,
-        ease: Gsap.ease("sine")
-      }
-    },
     {
       target: desc_,
       from: {
@@ -72,7 +59,6 @@ export function SectionContact() {
       to: {
         opacity: 1,
         translateX: 0,
-        duration: 2,
         ease: Gsap.ease("sine")
       }
     },
@@ -119,7 +105,7 @@ export function SectionContact() {
       <div id="overlay_contact" className={`absolute w-full h-full`} />
       <div ref={parent_} className={`section_container flex_centerxy flex-col py-20`}>
         <div className={`flex_centery flex-col mb-5`}>
-          <h3 ref={title_} className={`text_width_05 text_title mb-5 font-black text-2xl
+          <h3 className={`text_width_05 text_title mb-5 font-black text-2xl
             md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
             {"Let's Talk"}
           </h3>

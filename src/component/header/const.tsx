@@ -26,7 +26,7 @@ const SUB_MEDSOS = SOSMEDS.map<Item>(({ username, type, url, icon: IconSosmed },
       {username}
     </Typography.Link>,
     `connect-me${key}` as MenuKey,
-    <Icon src={IconSosmed} />
+    <IconSosmed />
   )
 ))
 
@@ -35,7 +35,7 @@ export const MENU_ITEMS: MenuItems = [
   Menu.item<MenuKey>(
     <Typography.Link href={HOME.href} className='menu_item_title'>
       {HOME.title}</Typography.Link>, HOME.id,
-    <div className='block md:hidden'><AiOutlineHome /></div>
+    <div className='block md:hidden'><AiOutlineHome /> </div>
   ),
   Menu.item<MenuKey>(
     <Typography.Link href={ABOUT.href} className='menu_item_title'>

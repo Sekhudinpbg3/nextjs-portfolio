@@ -7,25 +7,10 @@ import { TXT, SKILLS } from './const';
 
 export function SectionSkills() {
   const parent_ = useRef(null);
-  const title_ = useRef(null);
   const desc_ = useRef(null);
   const cards_ = useRef(null);
-  const cardChild_ = [useRef(null), useRef(null), useRef(null), useRef(null)]
 
   const tweens = useGsapFromTo(parent_, [
-    {
-      target: title_,
-      from: {
-        opacity: 0,
-        translateY: -200,
-
-      },
-      to: {
-        opacity: 1,
-        translateY: 0,
-        ease: Gsap.ease("sine")
-      }
-    },
     {
       target: desc_,
       from: {
@@ -37,56 +22,15 @@ export function SectionSkills() {
         translateX: 0,
         ease: Gsap.ease("sine")
       }
-    }
-  ], 1)
-
-  const cardTweens = useGsapFromTo(cards_, [
-    {
-      target: cardChild_[0],
-      from: {
-        opacity: 0,
-        translateY: -200,
-      },
-      to: {
-        opacity: 1,
-        translateY: 0,
-        ease: Gsap.ease("sine"),
-      }
     },
     {
-      target: cardChild_[1],
+      target: cards_,
       from: {
         opacity: 0,
-        translateX: 200,
       },
       to: {
         opacity: 1,
-        translateX: 0,
-        ease: Gsap.ease("sine"),
-      }
-    },
-    {
-      target: cardChild_[2],
-      from: {
-        opacity: 0,
-        translateX: -200,
-      },
-      to: {
-        opacity: 1,
-        translateX: 0,
-        ease: Gsap.ease("sine"),
-      }
-    },
-    {
-      target: cardChild_[3],
-      from: {
-        opacity: 0,
-        translateY: 200,
-      },
-      to: {
-        opacity: 1,
-        translateY: 0,
-        ease: Gsap.ease("sine"),
+        ease: Gsap.ease("sine")
       }
     }
   ], 1)
@@ -101,18 +45,7 @@ export function SectionSkills() {
     }
   }
 
-  const cardTweenHandler = () => {
-    for (const tw of cardTweens) {
-      if (isSection("skills")) {
-        tw.play().delay(0.5)
-      } else {
-        tw.reverse().delay(0.5)
-      }
-    }
-  }
-
   useWindowEvent("scroll", tweenHandler);
-  useWindowEvent("scroll", cardTweenHandler);
 
 
   return (
@@ -120,7 +53,7 @@ export function SectionSkills() {
       <div id="overlay_skills" className={`absolute w-full h-full`} />
       <div className={`section_container flex_centerxy flex-col py-20`}>
         <div className={`flex_centery flex-col mb-4 lg:mb-5`}>
-          <h3 ref={title_} className={`text_width_05 text_title mb-5 font-black text-2xl
+          <h3 className={`text_width_05 text_title mb-5 font-black text-2xl
           md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
             Skills
           </h3>
@@ -141,7 +74,7 @@ export function SectionSkills() {
                 key={key}
                 md={{ span: 12 }}
                 span={24}>
-                <div ref={cardChild_[key]} className={`card_regular text_regular h-fit md:h-full flex_centery flex-col p-5`}>
+                <div className={`card_regular text_regular h-fit md:h-full flex_centery flex-col p-5`}>
                   <h3 className={`text-base lg:text-lg font-bold`}>
                     {skillType}
                   </h3>

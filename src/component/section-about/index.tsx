@@ -11,8 +11,6 @@ export function SectionAbout() {
   const parent_ = useRef(null);
   const img_ = useRef(null);
   const textImg_ = useRef(null);
-  const title_ = useRef(null);
-  const subTittle_ = useRef(null);
   const desc_ = useRef(null);
   const cards_ = useRef(null);
 
@@ -42,30 +40,6 @@ export function SectionAbout() {
       }
     },
     {
-      target: title_,
-      from: {
-        opacity: 0,
-        translateY: 250,
-      },
-      to: {
-        opacity: 1,
-        translateY: 0,
-        ease: Gsap.ease("sine")
-      }
-    },
-    {
-      target: subTittle_,
-      from: {
-        opacity: 0,
-      },
-      to: {
-        opacity: 1,
-        delay: 1,
-        duration: 1,
-        ease: Gsap.ease("sine")
-      }
-    },
-    {
       target: desc_,
       from: {
         opacity: 0,
@@ -81,11 +55,9 @@ export function SectionAbout() {
       target: cards_,
       from: {
         opacity: 0,
-        translateX: -200,
       },
       to: {
         opacity: 1,
-        translateX: 0,
         ease: Gsap.ease("sine")
       }
     },
@@ -139,7 +111,7 @@ export function SectionAbout() {
             md={{ span: 15 }}
             span={24}>
             <div>
-              <h2 ref={title_} className={`text_width_05 text_title text-white font-black text-2xl mb-3
+              <h2 className={`text_width_05 text_title text-white font-black text-2xl mb-3
                 md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
                 About Me
               </h2>
@@ -153,7 +125,7 @@ export function SectionAbout() {
               </p>
 
               <div ref={cards_} className={`card_regular text_regular flex_centery flex-col h-fit md:h-full p-5 mt-10`}>
-                <h3 ref={subTittle_} className={`text-base lg:text-lg font-black`}>
+                <h3 className={`text-base lg:text-lg font-black`}>
                   Related Course
                 </h3>
 

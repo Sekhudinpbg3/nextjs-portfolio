@@ -7,21 +7,8 @@ html {
 }
 
 #profile_img {
-  background-color: hsla(237, 85%, 71%, 0.71);
-  background-image: radial-gradient(at 47% 51%, hsla(180, 79%, 26%, 0.73) 0px, transparent 50%),
-    radial-gradient(at 24% 80%, hsla(189, 100%, 50%, 0.31) 0px, transparent 50%),
-    radial-gradient(at 85% 33%, hsla(225, 100%, 28%, 1) 0px, transparent 50%),
-    radial-gradient(at 24% 19%, hsla(65, 100%, 48%, 0.24) 0px, transparent 50%);
   animation: profile_animate 5s ease-in-out 1s infinite;
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-}
-
-#App.dark #profile_img {
-  background-color: hsla(222, 54%, 20%, 0.71);
-  background-image: radial-gradient(at 47% 51%, hsla(180, 18%, 14%, 0.73) 0px, transparent 50%),
-    radial-gradient(at 24% 80%, hsla(188, 100%, 15%, 0.31) 0px, transparent 50%),
-    radial-gradient(at 85% 33%, hsla(225, 92%, 18%, 1) 0px, transparent 50%),
-    radial-gradient(at 24% 19%, hsla(60, 100%, 42%, 0.24) 0px, transparent 50%);
 }
 
 #about_profile {

@@ -1,5 +1,5 @@
 import { Row, Col, Carousel, CarouselProps, } from "antd";
-import { Icon, Img } from "@provider/asset";
+import { Icon } from "@provider/asset";
 import { PROJECTS } from "./const";
 import Image from "next/image";
 
@@ -20,12 +20,11 @@ const responsive: CarouselProps['responsive'] = [
   }
 ]
 
-const { profile } = Img;
 export function PartProjects() {
   return (
     <Carousel className={`overflow-hidden cursor-grab select-none`}
       dots={{ className: "dots_class" }}
-      autoplay={true}
+      autoplay={false}
       pauseOnHover={true}
       draggable={true}
       infinite={true}
