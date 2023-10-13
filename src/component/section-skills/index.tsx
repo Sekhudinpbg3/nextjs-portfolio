@@ -1,55 +1,11 @@
-import { useRef, } from "react"
 import { Col, Row } from "antd";
 import { Icon } from "@provider/asset";
-import { useGsapFromTo, Gsap } from "@provider/animation";
-import { isSection, useWindowEvent } from "@provider/hooks";
 import { TXT, SKILLS } from './const';
 
 export function SectionSkills() {
-  const parent_ = useRef(null);
-  const desc_ = useRef(null);
-  const cards_ = useRef(null);
-
-  const tweens = useGsapFromTo(parent_, [
-    {
-      target: desc_,
-      from: {
-        opacity: 0,
-        translateX: 200,
-      },
-      to: {
-        opacity: 1,
-        translateX: 0,
-        ease: Gsap.ease("sine")
-      }
-    },
-    {
-      target: cards_,
-      from: {
-        opacity: 0,
-      },
-      to: {
-        opacity: 1,
-        ease: Gsap.ease("sine")
-      }
-    }
-  ], 1)
-
-  const tweenHandler = () => {
-    for (const tw of tweens) {
-      if (isSection("skills")) {
-        tw.play().delay(0.5)
-      } else {
-        tw.reverse().delay(0.5)
-      }
-    }
-  }
-
-  useWindowEvent("scroll", tweenHandler);
-
 
   return (
-    <section ref={parent_} id="skills" className="section flex justify-center">
+    <section id="skills" className="section flex justify-center">
       <div id="overlay_skills" className={`absolute w-full h-full`} />
       <div className={`section_container flex_centerxy flex-col py-20`}>
         <div className={`flex_centery flex-col mb-4 lg:mb-5`}>
@@ -57,13 +13,12 @@ export function SectionSkills() {
           md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
             Skills
           </h3>
-          <p ref={desc_} className="text_regular text-base lg:text-lg text-center px-2 md:px-5">
+          <p className="text_regular text-base lg:text-lg text-center px-2 md:px-5">
             {TXT.summary}
           </p>
         </div>
 
         <Row className={`w-full`}
-          ref={cards_}
           justify={"center"}
           gutter={[
             { xs: 0, sm: 0, md: 20, xl: 25 },

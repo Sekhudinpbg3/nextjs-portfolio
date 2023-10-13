@@ -1,40 +1,10 @@
-import { useRef } from "react";
 import Image from 'next/image';
 import { Row, Col } from "antd";
 import { Img } from '@provider/asset';
-import { useGsapFromTo } from "@provider/animation";
-import { useWindowEvent, isSection } from "@provider/hooks";
 import { PartText } from './part-text';
 
 const { main } = Img.profile
 export function SectionHome() {
-  const parent_ = useRef(null);
-  const img_ = useRef(null);
-
-  const tweens = useGsapFromTo(parent_, [
-    {
-      target: img_,
-      from: {
-        opacity: 0,
-      },
-      to: {
-        delay: 1,
-        opacity: 1,
-      }
-    }
-  ], 1)
-
-  const tweenHandler = () => {
-    for (const tween of tweens) {
-      if (isSection("home")) {
-        tween.play().delay(0.5)
-      } else {
-        tween.reverse().delay(0.5)
-      }
-    }
-  }
-
-  useWindowEvent("scroll", tweenHandler)
 
   return (
     <section id="home" className="section flex_centerxy">
@@ -51,9 +21,9 @@ export function SectionHome() {
             justify-center lg:justify-end`}
             span={24}
             lg={{ span: 14 }}>
-            <div ref={parent_} className={`h-full max-h-[500px] w-full max-w-[500px]
+            <div className={`h-full max-h-[500px] w-full max-w-[500px]
               flex items-end justify-center lg:justify-end `}>
-              <Image ref={img_} className={`object-cover backdrop-blur-md bg-opacity-25`}
+              <Image className={`object-cover backdrop-blur-md bg-opacity-25`}
                 id='profile_img'
                 src={main.src}
                 alt={main.alt}

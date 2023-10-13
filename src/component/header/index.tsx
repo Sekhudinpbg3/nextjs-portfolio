@@ -50,7 +50,7 @@ export function Header() {
           <Col className="flex_centery space-x-2"
             order={3}
             md={{ order: 1 }}>
-            <PartResumeButton/>
+            <PartResumeButton />
             <ThemeToggle />
           </Col>
         </Row>

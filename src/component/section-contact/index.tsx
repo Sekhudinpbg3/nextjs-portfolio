@@ -1,10 +1,8 @@
-import { useRef, useState } from "react"
+import { useState } from "react"
 import { App, Row, Col, Form, Input, Typography } from "antd";
 import { BsSendFill, BsArrowRightShort } from "react-icons/bs";
 import { Icon } from "@provider/asset";
 import { Email } from "@provider/email";
-import { isSection, useWindowEvent } from "@provider/hooks";
-import { Gsap, useGsapFromTo } from "@provider/animation";
 import { TXT, CONTACTS } from "./const";
 import { EmailForm } from "./interface";
 
@@ -43,73 +41,16 @@ export function SectionContact() {
     }
   }
 
-
-  const parent_ = useRef(null);
-  const desc_ = useRef(null);
-  const mail_ = useRef(null);
-  const contact_ = useRef(null);
-
-  const tweens = useGsapFromTo(parent_, [
-    {
-      target: desc_,
-      from: {
-        opacity: 0,
-        translateX: 200
-      },
-      to: {
-        opacity: 1,
-        translateX: 0,
-        ease: Gsap.ease("sine")
-      }
-    },
-    {
-      target: mail_,
-      from: {
-        opacity: 0,
-        translateX: -200,
-      },
-      to: {
-        opacity: 1,
-        translateX: 0,
-        ease: Gsap.ease("sine")
-      }
-    },
-    {
-      target: contact_,
-      from: {
-        opacity: 0,
-        translateX: 200,
-      },
-      to: {
-        opacity: 1,
-        translateX: 0,
-        ease: Gsap.ease("sine")
-      }
-    }
-  ], 1)
-
-  const tweenHandler = () => {
-    for (const tween of tweens) {
-      if (isSection("contact")) {
-        tween.play().delay(0.5)
-      } else {
-        tween.reverse().delay(0.5)
-      }
-    }
-  }
-
-  useWindowEvent("scroll", tweenHandler);
-
   return (
     <section id="contact" className="section flex justify-center">
       <div id="overlay_contact" className={`absolute w-full h-full`} />
-      <div ref={parent_} className={`section_container flex_centerxy flex-col py-20`}>
+      <div className={`section_container flex_centerxy flex-col py-20`}>
         <div className={`flex_centery flex-col mb-5`}>
           <h3 className={`text_width_05 text_title mb-5 font-black text-2xl
             md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
             {"Let's Talk"}
           </h3>
-          <p ref={desc_} className="text_regular text-base lg:text-lg text-center px-2 md:px-5">
+          <p className="text_regular text-base lg:text-lg text-center px-2 md:px-5">
             {TXT.summary}
           </p>
         </div>
@@ -122,7 +63,7 @@ export function SectionContact() {
             lg={{ span: 14 }}
             xxl={{ span: 16 }}
             span={24}>
-            <div ref={mail_} className="relative card_regular flex_centery flex-col p-10">
+            <div className="relative card_regular flex_centery flex-col p-10">
               <div className={`${isLoading ? 'block' : 'hidden'} absolute inset-0
                 bg-transparent z-10 cursor-not-allowed`} />
               <h3 className={`text-base lg:text-lg font-semibold 
@@ -206,7 +147,7 @@ export function SectionContact() {
             lg={{ span: 10 }}
             xxl={{ span: 8 }}
             span={24}>
-            <Row ref={contact_} className="w-full" gutter={[0, 10]}>
+            <Row className="w-full" gutter={[0, 10]}>
               {
                 CONTACTS.map(({ address, type, icon, anchor }, key) => (
                   <Col

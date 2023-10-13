@@ -1,48 +1,15 @@
-import { useRef } from "react";
 import { Row, Col } from "antd";
 import { LiaRocketSolid } from "react-icons/lia";
 import { Icon } from "@provider/asset";
-import { isSection, useWindowEvent } from "@provider/hooks";
-import { useGsapFromTo, Gsap } from "@provider/animation"
 import { PartProjects } from "./part-projects";
 import { TXT } from './const'
 
 export function SectionProject() {
-  const parent_ = useRef(null);
-  const desc_ = useRef(null);
-
-  const tweens = useGsapFromTo(parent_, [
-    {
-      target: desc_,
-      from: {
-        opacity: 0,
-        translateX: 200
-      },
-      to: {
-        opacity: 1,
-        translateX: 0,
-        duration: 2,
-        ease: Gsap.ease("sine")
-      }
-    },
-  ], 1);
-
-  const tweenHandler = () => {
-    for (const tween of tweens) {
-      if (isSection("projects")) {
-        tween.play().delay(0.5)
-      } else {
-        tween.reverse().delay(0.5)
-      }
-    }
-  }
-
-  useWindowEvent("scroll", tweenHandler)
 
   return (
     <section id="projects" className="section flex justify-center">
       <div id="overlay_projects" className={`absolute w-full h-full`} />
-      <div ref={parent_} className={`section_container flex_centerxy flex-col py-20`}>
+      <div className={`section_container flex_centerxy flex-col py-20`}>
         <Row className={'w-full'}
           justify={"center"}
           align={"middle"}
@@ -55,7 +22,7 @@ export function SectionProject() {
                 md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
                 Recent Project
               </h3>
-              <p ref={desc_} className={`text_regular text-base lg:text-lg text-center lg:text-start`}>
+              <p className={`text_regular text-base lg:text-lg text-center lg:text-start`}>
                 {TXT.summary}
               </p>
             </div>
