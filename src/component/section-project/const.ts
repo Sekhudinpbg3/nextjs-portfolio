@@ -17,7 +17,12 @@ import {
   SiVite,
 } from "react-icons/si";
 import { Img } from "@provider/asset";
-import { Project } from "./interface";
+import { ProjectsText, Project } from "./interface";
+
+export const TXT: ProjectsText = {
+  summary: `I am a hands-on learner, making practical use of the knowledge I gain to apply to the projects I undertake,
+  whether they are professional collaborations with clients or personal creative endeavors just for fun.`,
+};
 
 // prettier-ignore
 const { 
@@ -42,12 +47,6 @@ export const PROJECTS: Project[] = [
     type: "Web Fullstack",
     images: Stock4Casting,
     stacks: [SiNextdotjs, SiTailwindcss, SiTensorflow],
-  },
-  {
-    name: "Attendance Application",
-    type: "Dekstop",
-    images: AttendanceApp,
-    stacks: [SiDotnet, SiMicrosoftsqlserver],
   },
   {
     name: "Cashier Application",

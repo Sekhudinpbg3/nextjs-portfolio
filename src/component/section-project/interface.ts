@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
 import type { ImgSource } from "@provider/asset/image/util";
+import { BaseTXT } from "@provider/types/interface";
 
 type ProjectType =
   | "Web Frontend"
@@ -24,3 +25,5 @@ export type Project = {
   link?: string;
   objectType?: ObjectType;
 };
+
+export interface ProjectsText extends BaseTXT {}

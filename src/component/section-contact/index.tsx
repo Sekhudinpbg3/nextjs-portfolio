@@ -5,9 +5,8 @@ import { Icon } from "@provider/asset";
 import { Email } from "@provider/email";
 import { isSection, useWindowEvent } from "@provider/hooks";
 import { Gsap, useGsapFromTo } from "@provider/animation";
-import { CONTACTS } from "./const";
+import { TXT, CONTACTS } from "./const";
 import { EmailForm } from "./interface";
-import css from './style.module.css';
 
 export function SectionContact() {
   const [isLoading, setLoading] = useState(false)
@@ -120,15 +119,12 @@ export function SectionContact() {
       <div id="overlay_contact" className={`absolute w-full h-full`} />
       <div ref={parent_} className={`section_container flex_centerxy flex-col py-20`}>
         <div className={`flex_centery flex-col mb-5`}>
-          <h3 ref={title_} className={`${css['contact']} text_title mb-5 font-black text-2xl
+          <h3 ref={title_} className={`text_width_05 text_title mb-5 font-black text-2xl
             md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
             {"Let's Talk"}
           </h3>
           <p ref={desc_} className="text_regular text-base lg:text-lg text-center px-2 md:px-5">
-            Must explain to you how all this mistaken idea of denouncing
-            pleasure and praising pain was born and I will give you
-            a complete account the system and expound the actual
-            and praising pain was born.
+            {TXT.summary}
           </p>
         </div>
 

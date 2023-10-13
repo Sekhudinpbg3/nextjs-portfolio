@@ -1,12 +1,14 @@
 import { Tooltip } from "antd";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Icon } from "@provider/asset";
+import { Icon, Public } from "@provider/asset";
 
+const { cv } = Public.file
 export function PartResumeButton() {
   return (
-    <button className="hidden md:block"
-      name="resume-button"
-      aria-label="resume-button">
+    <a className="hidden md:block"
+      href={cv.url}
+      target="_blank"
+      download={cv.name}>
       <span className={`text_regular space-x-1
         hidden lg:flex items-center group`}>
         <span className="group-hover:text-blue-700 duration-500">
@@ -32,6 +34,6 @@ export function PartResumeButton() {
           </>
         </Tooltip>
       </span>
-    </button>
+    </a>
   )
 }

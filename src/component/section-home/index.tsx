@@ -6,7 +6,7 @@ import { useGsapFromTo } from "@provider/animation";
 import { useWindowEvent, isSection } from "@provider/hooks";
 import { PartText } from './part-text';
 
-const { profile } = Img
+const { main } = Img.profile
 export function SectionHome() {
   const parent_ = useRef(null);
   const img_ = useRef(null);
@@ -47,16 +47,16 @@ export function SectionHome() {
             <PartText />
           </Col>
 
-          <Col className={`h-fit lg:h-full
-            flex items-center lg:items-end justify-center lg:justify-end`}
+          <Col className={`h-fit lg:h-full flex items-center lg:items-end
+            justify-center lg:justify-end`}
             span={24}
             lg={{ span: 14 }}>
-            <div ref={parent_} className={`h-full w-full flex items-end
-              justify-center lg:justify-end `}>
+            <div ref={parent_} className={`h-full max-h-[500px] w-full max-w-[500px]
+              flex items-end justify-center lg:justify-end `}>
               <Image ref={img_} className={`object-cover backdrop-blur-md bg-opacity-25`}
                 id='profile_img'
-                src={profile.src}
-                alt={profile.alt}
+                src={main.src}
+                alt={main.alt}
                 priority={true}
                 placeholder="blur"
                 quality={100}

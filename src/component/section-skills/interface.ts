@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import { BaseTXT } from "@provider/types/interface";
 
 type SkillType = "Programming Language" | "Frontend Developer" | "Backend Developer" | "Other";
 
@@ -12,3 +13,5 @@ export interface Skills {
   skillType: SkillType;
   skills: Skill[];
 }
+
+export interface SkillsText extends BaseTXT {}

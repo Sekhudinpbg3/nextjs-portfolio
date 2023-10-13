@@ -37,7 +37,7 @@ ul.ant-menu.ant-menu-sub.ant-menu-vertical {
 }
 
 /* for carousel dots */
-.dots_class li {
+.dots_class li button {
   background-color: white !important;
 }
 

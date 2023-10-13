@@ -5,7 +5,7 @@ import { SocialMedia } from "@component/section-home/social-media";
 import { SOSMEDS } from "@component/section-home/const";
 import { NAVIGATIONS } from "./const";
 
-const { profile } = Img;
+const { bw } = Img.profile;
 export function Footer() {
   const date = new Date();
   const currentYear = date.getFullYear();
@@ -22,8 +22,8 @@ export function Footer() {
                   <Avatar className={`bg-black/10 dark:bg-white/10`}
                     shape="circle"
                     size={56}
-                    alt={profile.alt}
-                    src={profile.url} />
+                    alt={bw.alt}
+                    src={bw.url} />
                   <h3 className={`text-2xl 2xl:text-3xl font-black
                   text-blue-600 dark:text-blue-700`}>
                     Sekhudinpbg3

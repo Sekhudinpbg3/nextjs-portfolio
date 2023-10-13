@@ -1,23 +1,11 @@
 import { IconType } from "react-icons";
+import { BaseTXT } from "@provider/types/interface";
 
-export type ColorName =
-  | "green"
-  | "pink"
-  | "red"
-  | "purple"
-  | "yellow"
-  | "blue"
-  | "emerald"
-  | "teal"
-  | "sky"
-  | "violet";
-
-export interface Color {
-  from: string;
-  darkFrom: string;
-}
-
-export interface RelatedCourses {
+export type RelatedCourses = {
   name: string;
   icon: IconType;
+};
+
+export interface AboutText extends Partial<BaseTXT> {
+  paragraph: string[];
 }

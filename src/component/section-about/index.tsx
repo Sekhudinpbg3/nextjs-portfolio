@@ -4,10 +4,9 @@ import { Row, Col } from "antd";
 import { Icon, Img } from "@provider/asset";
 import { Gsap, useGsapFromTo } from "@provider/animation";
 import { isSection, useWindowEvent } from "@provider/hooks";
-import { COURSES } from "./const";
-import css from './style.module.css';
+import { TXT, COURSES } from "./const";
 
-const { profile } = Img;
+const { color } = Img.profile;
 export function SectionAbout() {
   const parent_ = useRef(null);
   const img_ = useRef(null);
@@ -109,47 +108,48 @@ export function SectionAbout() {
       <div id="overlay_about" className={`absolute w-full h-full`} />
 
       <div className={`section_container`}>
-        <Row ref={parent_} className={`h-fit lg:h-full py-20`} justify={"end"}>
-          <Col className="flex justify-start items-center"
+        <Row className={`h-fit lg:h-full py-20`}
+          ref={parent_}>
+
+          <Col className="flex justify-start items-center md:items-start lg:items-center"
             lg={{ span: 12 }}
+            md={{ span: 9 }}
             span={24}>
             <div className="relative">
               <Image ref={img_} className={`object-cover rounded-2xl
                 w-[200px] h-[250px] lg:w-[350px] lg:h-[400px]
                 bg-gradient-to-b from-transparent via-blue-600/70 to-blue-600
                 dark:from-blue-600/5 dark:via-blue-600/40 dark:to-blue-600`}
-                src={profile.src}
-                alt={profile.alt} />
+                src={color.src}
+                alt={color.alt} />
 
               <div ref={textImg_} className={`flex_centerxy h-fit w-fit p-1
-                absolute top-[73%] left-[50%] lg:left-[65%] rounded-lg lg:rounded-2xl
+                absolute top-[75%] -right-[30%] rounded-lg lg:rounded-2xl
                 bg-gradient-to-r from-blue-300 via-blue-500 to-blue-600`}>
-                <div className={`flex_centery space-x-2 px-3 py-1.5 lg:px-6 lg:py-3
-                  rounded-md lg:rounded-xl bg-gradient-to-r from-blue-800 to-blue-600`}>
-                  <h3 className={`text-xl lg:text-3xl font-black text-white`}>100%</h3>
-
-                  <div className="text-white text-sm lg:text-base">
-                    <h3>Profesional</h3>
-                  </div>
+                <div className={`rounded-md lg:rounded-xl bg-gradient-to-r from-blue-800 to-blue-600`}>
+                  <h3 className="text-white py-2 px-4 text-sm lg:text-base w-fit">Bachelor of Informatics</h3>
                 </div>
               </div>
             </div>
           </Col>
 
-          <Col className={`mt-8 lg:mt-0 flex justify-start items-start
+          <Col className={`mt-8 md:mt-0 flex justify-start items-start
             lg:items-center`}
             lg={{ span: 12 }}
+            md={{ span: 15 }}
             span={24}>
             <div>
-              <h2 ref={title_} className={`${css['about_me']} text_title text-white font-black text-2xl mb-5
+              <h2 ref={title_} className={`text_width_05 text_title text-white font-black text-2xl mb-3
                 md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
                 About Me
               </h2>
               <p ref={desc_} className="text_regular text-left text-base lg:text-lg">
-                Must explain to you how all this mistaken idea of denouncing
-                pleasure and praising pain was born and I will give you
-                a complete account the system and expound the actual
-                and praising pain was born.
+                {TXT.paragraph.map((par, key) => (
+                  <span className="mt-3 block"
+                    key={key}>
+                    {par}
+                  </span>
+                ))}
               </p>
 
               <div ref={cards_} className={`card_regular text_regular flex_centery flex-col h-fit md:h-full p-5 mt-10`}>

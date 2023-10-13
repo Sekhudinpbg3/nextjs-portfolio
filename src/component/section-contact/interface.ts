@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { IconType } from "react-icons";
+import { BaseTXT } from "@provider/types/interface";
 
 export type EmailForm = {
   name: string;
@@ -8,7 +9,13 @@ export type EmailForm = {
   message: string;
 };
 
-type ContactType = "Address" | "Office Address" | "Official Mail" | "Official Phone";
+type ContactType =
+  | "Address"
+  | "Office Address"
+  | "Official Mail"
+  | "Official Phone"
+  | "Email"
+  | "Whatsapp";
 type Anchor = {
   text: string;
   href: string;
@@ -20,3 +27,5 @@ export type ContactAddress = {
   anchor?: Anchor;
   extra?: ReactNode;
 };
+
+export interface ContactText extends BaseTXT {}

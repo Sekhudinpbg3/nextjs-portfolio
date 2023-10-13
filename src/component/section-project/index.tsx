@@ -5,7 +5,7 @@ import { Icon } from "@provider/asset";
 import { isSection, useWindowEvent } from "@provider/hooks";
 import { useGsapFromTo, Gsap } from "@provider/animation"
 import { PartProjects } from "./part-projects";
-import css from "./style.module.css";
+import { TXT } from './const'
 
 export function SectionProject() {
   const parent_ = useRef(null);
@@ -75,13 +75,12 @@ export function SectionProject() {
             lg={{ span: 12 }}
             span={24}>
             <div className={`flex flex-col items-center lg:items-start`}>
-              <h3 ref={title_} className={`${css['project']} text_title mb-5 font-black text-2xl
+              <h3 ref={title_} className={`text_width_05 text_title mb-5 font-black text-2xl
                 md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
                 Recent Project
               </h3>
               <p ref={desc_} className={`text_regular text-base lg:text-lg text-center lg:text-start`}>
-                Must explain to you how all this mistaken idea of denouncing
-                pleasure and praising pain.
+                {TXT.summary}
               </p>
             </div>
           </Col>

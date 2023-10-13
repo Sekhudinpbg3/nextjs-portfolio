@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import * as _ from "lodash";
-import { Menu, Drawer, Avatar } from 'antd';
+import { Menu, Drawer } from 'antd';
 import { AiOutlineMenu, AiOutlineDoubleRight } from 'react-icons/ai';
-import { Icon, Img } from '@provider/asset';
+import { Icon } from '@provider/asset';
 import { useWindowMedia, useWindowEvent, activeSection, useWindowLoad } from '@provider/hooks';
-import { MenuKey } from "@provider/types";
+import { MenuKey } from "@provider/types/interface";
 import { MENU_ITEMS, DEF_SELECTED_MENU, MENU_KEY } from './const';
 import { MenuOnSelect } from './interface';
 
 
-const { profile } = Img
 export function PartNavMenu() {
   const [open, setOpen] = useState<boolean>(false);
   const [collapse, setCollapse] = useState<boolean>(true);

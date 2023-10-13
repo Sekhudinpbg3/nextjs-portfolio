@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lg": "lighthouse http://localhost:3000/ --view --output-path=.lighthouse/lg-result.html"
+    "lh-check": "lighthouse http://localhost:3000/ --view --output-path=.lighthouse/lg-result.html"
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.17.0",

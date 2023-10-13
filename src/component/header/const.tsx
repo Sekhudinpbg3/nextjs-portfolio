@@ -9,9 +9,11 @@ import { BsCodeSlash } from "react-icons/bs";
 import { MdAlternateEmail, MdConnectWithoutContact } from "react-icons/md";
 import { SOSMEDS } from "@component/section-home/const";
 import { Menu, Item, MenuItems } from "@provider/antd/util";
-import { Icon } from '@provider/asset';
-import { HOME, ABOUT, SKILLS, PROJECTS, CONTACT, MenuKey } from "@provider/types";
+import { Icon, Public } from '@provider/asset';
+import { HOME, ABOUT, SKILLS, PROJECTS, CONTACT } from "@provider/types/const";
+import { MenuKey } from "@provider/types/interface";
 
+const { cv } = Public.file;
 export const MENU_KEY: MenuKey[] = ['home', 'about', 'skills', 'projects', 'contact'];
 export const DEF_SELECTED_MENU: MenuKey[] = ['home'];
 
@@ -61,6 +63,11 @@ export const MENU_ITEMS: MenuItems = [
   ),
   Menu.item<MenuKey>(
     <p className='menu_item_title block md:hidden'>Resume</p>, 'resume',
-    <div className='block md:hidden'><AiOutlineDownload /></div>
+    <a className='block md:hidden'
+      target="_blank"
+      href={cv.url}
+      download={cv.name}>
+      <AiOutlineDownload />
+    </a>
   ),
 ];

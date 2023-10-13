@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.text_width_05 {
+  -webkit-text-stroke-width: 0.5px;
+}
+
 #profile_img {
   background-color: hsla(237, 85%, 71%, 0.71);
   background-image: radial-gradient(at 47% 51%, hsla(180, 79%, 26%, 0.73) 0px, transparent 50%),

@@ -26,7 +26,13 @@ import {
   SiRedux,
   SiReactivex,
 } from "react-icons/si";
-import { Skills } from "./interface";
+import { SkillsText, Skills } from "./interface";
+
+export const TXT: SkillsText = {
+  summary: `As a software engineer, I grew up with a passion for continuing
+  to learn and master various programming technologies,
+  never being tied to just one job role.`,
+};
 
 export const SKILLS: Skills[] = [
   {

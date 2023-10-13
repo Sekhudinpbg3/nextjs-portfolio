@@ -2,9 +2,8 @@ import { useRef, } from "react"
 import { Col, Row } from "antd";
 import { Icon } from "@provider/asset";
 import { useGsapFromTo, Gsap } from "@provider/animation";
-import { isSection, useWindowEvent, useWindowLoad } from "@provider/hooks";
-import { SKILLS } from './const';
-import css from './style.module.css';
+import { isSection, useWindowEvent } from "@provider/hooks";
+import { TXT, SKILLS } from './const';
 
 export function SectionSkills() {
   const parent_ = useRef(null);
@@ -121,15 +120,12 @@ export function SectionSkills() {
       <div id="overlay_skills" className={`absolute w-full h-full`} />
       <div className={`section_container flex_centerxy flex-col py-20`}>
         <div className={`flex_centery flex-col mb-4 lg:mb-5`}>
-          <h3 ref={title_} className={`${css['skills']} text_title mb-5 font-black text-2xl
+          <h3 ref={title_} className={`text_width_05 text_title mb-5 font-black text-2xl
           md:text-3xl lg:text-4xl drop-shadow dark:drop-shadow-none`}>
             Skills
           </h3>
           <p ref={desc_} className="text_regular text-base lg:text-lg text-center px-2 md:px-5">
-            Must explain to you how all this mistaken idea of denouncing
-            pleasure and praising pain was born and I will give you
-            a complete account the system and expound the actual
-            and praising pain was born.
+            {TXT.summary}
           </p>
         </div>
 

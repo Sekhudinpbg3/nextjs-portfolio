@@ -25,7 +25,7 @@ export function PartProjects() {
   return (
     <Carousel className={`overflow-hidden cursor-grab select-none`}
       dots={{ className: "dots_class" }}
-      autoplay={false}
+      autoplay={true}
       pauseOnHover={true}
       draggable={true}
       infinite={true}
@@ -44,8 +44,8 @@ export function PartProjects() {
                 effect="fade"
                 lazyLoad={'progressive'}
                 speed={2000}
-                autoplaySpeed={5000}
-                autoplay={false}>
+                autoplaySpeed={4000}
+                autoplay={true}>
                 {images.map(({ src, alt }, imgKey) => (
                   <div key={imgKey} className={`w-full h-[500px] backdrop-blur-sm
                    bg-black/20 dark:bg-white/20`}>

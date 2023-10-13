@@ -1,5 +1,13 @@
 import { SiLinkedin, SiInstagram, SiGithub } from "react-icons/si";
-import { SocialMedia } from "./interface";
+import { SocialMedia, HomeText } from "./interface";
+
+export const TXT: HomeText = {
+  greet: "Hello,",
+  name: "I Am Sekhudin",
+  as: "Software Engineer",
+  summary: `Passionate and versatile software engineer with a strong interest in pursuing a career, I am enthusiastic about continuing to learn and
+  committed to contributing to innovative projects that challenge and inspire the growth of the technology industry`,
+};
 
 export const SOSMEDS: SocialMedia[] = [
   {

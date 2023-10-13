@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Layout, Row, Col, Tooltip } from 'antd';
+import { Layout, Row, Col } from 'antd';
 import * as _ from 'lodash';
 import { ThemeToggle } from "@provider/antd";
 import { useWindowEvent, useWindowLoad } from "@provider/hooks";

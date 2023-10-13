@@ -4,7 +4,7 @@ import { Gsap, useGsapFromTo } from "@provider/animation";
 import { Icon, Font } from "@provider/asset";
 import { isSection, useWindowEvent } from "@provider/hooks";
 import { SocialMedia } from './social-media';
-import { SOSMEDS } from './const';
+import { TXT, SOSMEDS } from './const';
 import css from './style.module.css';
 
 const { inter, lato } = Font;
@@ -110,23 +110,20 @@ export function PartText() {
       justify-items-center lg:justify-items-start text-center lg:text-start`}>
       <h2 ref={hello_} className={`${lato.className} ${css['hello']} w-full font-black 
       text-yellow-500 mt-0.5 md:mt-2 text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl`}>
-        Hello,
+        {TXT.greet}
       </h2>
       <h2 ref={name_} className={`${inter.className} ${css['name']} text_title_name w-full 
         font-black mt-2 md:mt-4 text-3xl md:text-4xl lg:text-5xl 2xl:text-7xl`}>
-        I Am Sekhudin
+        {TXT.name}
       </h2>
       <h3 ref={as_} className={`${inter.className} ${css['as']} w-full font-bold text-blue-600
         mt-0.5 md:mt-2 text-lg md:text-xl lg:text-2xl 2xl:text-3xl`}>
-        Software Engineer
+        {TXT.as}
       </h3>
 
       <p ref={desc_} className={`text_regular font-medium
         mt-3 md:mt-4 lg:mt-5 px-8 lg:px-0 text-base lg:text-lg 2xl:text-xl`}>
-        Must explain to how all this mistaken idea
-        denouncing pleasure pain the system and expound the actua.
-        Must explain to how all this mistaken idea
-        denouncing pleasure pain the system and expound the actua.
+        {TXT.summary}
       </p>
       <div className="mt-3 md:mt-4 lg:mt-5 flex_centery space-x-0 md:space-x-3">
         <button ref={hire_} className={`flex_centerxy w-fit space-x-1 text-base
