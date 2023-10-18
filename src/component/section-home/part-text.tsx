@@ -1,5 +1,6 @@
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Icon, Font } from "@provider/asset";
+import { CONTACT } from "@provider/types/const";
 import { SocialMedia } from './social-media';
 import { TXT, SOSMEDS } from './const';
 import css from './style.module.css';
@@ -29,9 +30,10 @@ export function PartText() {
         {TXT.summary}
       </p>
       <div className="mt-3 md:mt-4 lg:mt-5 flex_centery space-x-0 md:space-x-3">
-        <button className={`flex_centerxy w-fit space-x-1 text-base
+        <a className={`flex_centerxy w-fit space-x-1 text-base
           lg:text-lg py-2 px-4 lg:px-6 rounded-full bg-blue-600 text-gray-100
-          group hover:drop-shadow-lg dark:bg-blue-700 duration-500`}>
+          group hover:drop-shadow-lg dark:bg-blue-700 duration-500`}
+          href={CONTACT.href}>
           <span className={`translate-x-4 group-hover:-translate-x-0 duration-500`}>
             Hire Me
           </span>
@@ -41,7 +43,7 @@ export function PartText() {
               className='group-hover:translate-x-0 group-hover:opacity-100 duration-500'
             />
           </span>
-        </button>
+        </a>
         <div className="hidden lg:flex items-center space-x-3">
           {SOSMEDS.map(({ username, type, url, icon }, key) => (
             <SocialMedia
