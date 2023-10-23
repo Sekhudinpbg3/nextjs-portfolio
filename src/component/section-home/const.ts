@@ -5,8 +5,9 @@ export const TXT: HomeText = {
   greet: "Hello,",
   name: "I Am Sekhudin",
   as: "Software Engineer",
-  summary: `Passionate and versatile software engineer with a strong interest in pursuing a career, I am enthusiastic about continuing to learn and
-  committed to contributing to innovative projects that challenge and inspire the growth of the technology industry`,
+  summary: `I am a graduate with a Bachelor's degree in Informatics who is passionate about software engineering and strongly committed to
+  pursuing a career in this field. I am enthusiastic about continuous learning and dedicated to contributing to innovative projects that
+  both challenge and inspire the growth of the technology industry.`,
 };
 
 export const SOSMEDS: SocialMedia[] = [
